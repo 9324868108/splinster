@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Freelancer Accountability Rules | Splinster</title>
+  <meta name="description" content="Splinster’s Freelancer Accountability Rules. Tiered penalties, valid emergency exceptions, and performance tiers designed to protect guaranteed delivery." />
+  <meta name="theme-color" content="#4B1ED6" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style>
+    :root{
+      --spl-purple:#4B1ED6;
+      --spl-purple-ink:#2B0D8A;
+    }
+
+    body{
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      background: #fff;
+    }
+
+    .font-display{ font-family: Outfit, Inter, ui-sans-serif, system-ui; }
+
+    /* Subtle reveal animation */
+    .reveal{ opacity: 0; transform: translateY(18px); transition: opacity 700ms ease, transform 700ms ease; }
+    .reveal.in{ opacity: 1; transform: translateY(0); }
+
+    /* Header gradient */
+    .page-head{
+      background: radial-gradient(900px 420px at 50% 0%, rgba(75, 30, 214, 0.10) 0%, rgba(75, 30, 214, 0.04) 45%, rgba(255,255,255,0) 75%),
+                  linear-gradient(180deg, rgba(75, 30, 214, 0.06) 0%, rgba(255,255,255,1) 70%);
+    }
+
+    /* Focus ring */
+    :focus-visible{ outline: 3px solid rgba(75,30,214,.35); outline-offset: 3px; border-radius: 10px; }
+
+    /* Print-friendly */
+    @media print{
+      .no-print{ display: none !important; }
+      a{ color: #111827 !important; text-decoration: none !important; }
+      body{ background: #fff !important; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .reveal{ transition: none; opacity: 1; transform: none; }
+      html{ scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body class="text-slate-900">
+  <!-- Skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[999] focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:shadow-lg no-print">
+    Skip to content
+  </a>
+
+  <!-- ============================
+       SECTION 1: NAVIGATION BAR
+       ============================ -->
+  <header id="siteHeader" class="sticky top-0 z-50 no-print">
+    <nav aria-label="Primary" class="bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-transparent transition-shadow">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="h-20 flex items-center justify-between">
+          <!-- Left: Logo -->
+          <a href="index.html" class="flex items-center gap-3" aria-label="Home">
+            <img
+              src="https://image2url.com/r2/bucket1/images/1766620407393-9652041c-1f7f-4a91-b2e5-0b406cd75c2e.png"
+              alt="Splinster"
+              class="h-11 sm:h-12 w-auto drop-shadow-sm"
+              loading="eager"
+              decoding="async"
+            />
+          </a>
+
+          <!-- Center: Links (desktop) -->
+          <div class="hidden md:flex items-center gap-8 text-sm">
+            <a class="text-slate-600 hover:text-[color:var(--spl-purple)] transition" href="index.html#how">How It Works</a>
+            <a class="text-slate-600 hover:text-[color:var(--spl-purple)] transition" href="index.html#clients">For Clients</a>
+            <a class="text-slate-600 hover:text-[color:var(--spl-purple)] transition" href="index.html#freelancers">For Freelancers</a>
+            <a class="text-slate-600 hover:text-[color:var(--spl-purple)] transition" href="index.html#pricing">Pricing</a>
+            <a class="text-slate-600 hover:text-[color:var(--spl-purple)] transition" href="about.html">About</a>
+          </div>
+
+          <!-- Right: Buttons (desktop) -->
+          <div class="hidden md:flex items-center gap-3">
+            <a href="login.html" class="text-sm text-slate-600 hover:text-slate-900 transition px-3 py-2 rounded-lg" aria-label="Sign in">
+              Sign In
+            </a>
+            <a href="sign-up.html" class="inline-flex items-center justify-center rounded-xl bg-[#4B1ED6] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] transition will-change-transform">
+              Get Started
+            </a>
+          </div>
+
+          <!-- Mobile: Hamburger -->
+          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl p-2 text-slate-700 hover:bg-slate-100 transition" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white/95 backdrop-blur">
+        <div class="mx-auto max-w-6xl px-6 py-4 grid gap-2 text-sm">
+          <a class="py-2 text-slate-700 hover:text-[color:var(--spl-purple)]" href="index.html#how">How It Works</a>
+          <a class="py-2 text-slate-700 hover:text-[color:var(--spl-purple)]" href="index.html#clients">For Clients</a>
+          <a class="py-2 text-slate-700 hover:text-[color:var(--spl-purple)]" href="index.html#freelancers">For Freelancers</a>
+          <a class="py-2 text-slate-700 hover:text-[color:var(--spl-purple)]" href="index.html#pricing">Pricing</a>
+          <a class="py-2 text-slate-700 hover:text-[color:var(--spl-purple)]" href="about.html">About</a>
+          <div class="pt-2 flex items-center gap-3">
+            <a class="flex-1 text-slate-700 border border-slate-200 rounded-xl px-4 py-3 hover:bg-slate-50 transition text-center" href="login.html" aria-label="Sign in (mobile)">Sign In</a>
+            <a href="sign-up.html" class="flex-1 inline-flex items-center justify-center rounded-xl bg-[#4B1ED6] px-4 py-3 font-semibold text-white shadow-sm hover:shadow-md transition">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============================
+         SECTION 2: PAGE HEADER
+         ============================ -->
+    <section class="page-head">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-16 sm:py-20">
+          <div class="reveal max-w-3xl">
+            <div class="text-xs font-semibold tracking-[0.22em] text-[color:var(--spl-purple)]">FOR FREELANCERS</div>
+            <h1 class="mt-4 font-display text-4xl sm:text-5xl font-extrabold tracking-tight">Accountability & Rules</h1>
+            <p class="mt-4 text-base sm:text-lg text-slate-600">Clear guidelines for fair and transparent project delivery.</p>
+            <p class="mt-3 text-sm text-slate-500">Last Updated: January 12, 2026</p>
+
+            <!-- Breadcrumbs -->
+            <nav aria-label="Breadcrumb" class="mt-8 text-sm text-slate-500">
+              <ol class="flex flex-wrap items-center gap-2">
+                <li><a class="hover:text-slate-900 transition" href="index.html">Home</a></li>
+                <li aria-hidden="true">/</li>
+                <li><a class="hover:text-slate-900 transition" href="index.html#freelancers">For Freelancers</a></li>
+                <li aria-hidden="true">/</li>
+                <li class="text-slate-900 font-semibold">Accountability Rules</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 3 + 4: SIDEBAR + CONTENT
+         ============================ -->
+    <section class="bg-white">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-10 sm:py-12">
+          <div class="grid gap-10 lg:grid-cols-[280px_1fr]">
+
+            <!-- Sidebar (desktop) -->
+            <aside class="hidden md:block no-print">
+              <div class="sticky top-28">
+                <div class="rounded-3xl border border-slate-200 bg-white p-6">
+                  <div class="flex items-center justify-between gap-4">
+                    <div class="text-sm font-semibold text-slate-900">Contents</div>
+                    <a href="#" id="printBtn" class="text-xs font-semibold text-slate-500 hover:text-[color:var(--spl-purple)] transition">Print</a>
+                  </div>
+
+                  <!-- Search -->
+                  <label class="mt-4 block">
+                    <span class="sr-only">Search contents</span>
+                    <input id="tocSearch" type="search" placeholder="Search..." class="h-11 w-full rounded-2xl border border-slate-200 bg-white px-4 text-sm outline-none focus:border-[#4B1ED6] transition" />
+                  </label>
+
+                  <nav class="mt-5" aria-label="On this page">
+                    <ul id="tocList" class="space-y-1 text-sm">
+                      <li><a class="toc-link block rounded-xl px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition" href="#overview">Overview</a></li>
+                      <li><a class="toc-link block rounded-xl px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition" href="#penalties">Penalty Structure</a></li>
+                      <li><a class="toc-link block rounded-xl px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition" href="#emergencies">Valid Emergencies</a></li>
+                      <li><a class="toc-link block rounded-xl px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition" href="#tiers">Performance Tiers</a></li>
+                      <li><a class="toc-link block rounded-xl px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition" href="#rules">Additional Rules</a></li>
+                      <li><a class="toc-link block rounded-xl px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition" href="#legal">Legal Terms</a></li>
+                      <li><a class="toc-link block rounded-xl px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition" href="#faq">FAQ</a></li>
+                    </ul>
+                  </nav>
+
+                  <div class="mt-5 rounded-2xl border border-[#4B1ED6]/15 bg-[#4B1ED6]/6 p-4">
+                    <div class="text-xs font-semibold tracking-[0.18em] text-[color:var(--spl-purple)]">WHY THIS EXISTS</div>
+                    <p class="mt-2 text-sm text-slate-700">
+                      Splinster is a guaranteed delivery platform. These rules are enforced to protect client trust and to keep reliable freelancers rewarded.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Mobile TOC dropdown -->
+            <div class="md:hidden no-print">
+              <div class="rounded-3xl border border-slate-200 bg-white p-5">
+                <label class="text-sm font-semibold text-slate-900" for="tocSelect">Contents</label>
+                <select id="tocSelect" class="mt-3 h-12 w-full rounded-2xl border border-slate-200 bg-white px-4 text-sm outline-none focus:border-[#4B1ED6] transition">
+                  <option value="#overview">Overview</option>
+                  <option value="#penalties">Penalty Structure</option>
+                  <option value="#emergencies">Valid Emergencies</option>
+                  <option value="#tiers">Performance Tiers</option>
+                  <option value="#rules">Additional Rules</option>
+                  <option value="#legal">Legal Terms</option>
+                  <option value="#faq">FAQ</option>
+                </select>
+                <button id="mobilePrintBtn" type="button" class="mt-3 inline-flex w-full items-center justify-center rounded-2xl bg-white border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-900 hover:shadow-sm hover:scale-[1.01] transition">
+                  Print
+                </button>
+              </div>
+            </div>
+
+            <!-- Main content -->
+            <article class="min-w-0">
+              <div class="max-w-3xl">
+
+                <!-- ============================
+                     OVERVIEW
+                     ============================ -->
+                <section id="overview" class="reveal scroll-mt-28">
+                  <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[color:var(--spl-purple)]">Overview</h2>
+
+                  <div class="mt-4 grid gap-3">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                      <div class="text-sm font-semibold text-slate-900">Freelancer Accountability & Penalty System</div>
+                      <div class="mt-2 text-sm text-slate-700"><span class="font-semibold">Purpose:</span> Prevent abuse, protect our guarantee, maintain platform integrity.</div>
+                      <div class="mt-1 text-sm text-slate-700"><span class="font-semibold">Version:</span> 2.0 — Strict Enforcement Model.</div>
+                    </div>
+
+                    <div class="rounded-2xl border border-[#4B1ED6]/20 bg-[#4B1ED6]/6 p-5">
+                      <div class="flex items-start gap-3">
+                        <div class="mt-0.5 text-[color:var(--spl-purple)]" aria-hidden="true">⚠️</div>
+                        <div>
+                          <div class="text-sm font-semibold text-slate-900">Important</div>
+                          <p class="mt-2 text-sm text-slate-700">
+                            Splinster is not a freelancing marketplace. We guarantee outcomes. That guarantee only works if every accepted project is treated as a real commitment.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h3 class="mt-10 text-xl sm:text-2xl font-bold text-slate-900">The problem we’re solving</h3>
+                  <p class="mt-3 text-slate-700">
+                    Partial completion abandonment is unacceptable. A freelancer completes part of the work, gets paid, and disappears — leaving Splinster to replace them fast to protect the client.
+                    These rules exist to prevent that behavior and to increase trust for clients and reliable freelancers.
+                  </p>
+
+                  <div class="mt-6 rounded-3xl border border-slate-200 bg-slate-50 p-5">
+                    <div class="flex items-center justify-between gap-4">
+                      <div class="text-sm font-semibold text-slate-900">Example abuse case</div>
+                    </div>
+                    <pre class="mt-4 overflow-auto rounded-2xl border border-slate-200 bg-white p-4 text-xs leading-6 text-slate-700"><code>Project: E-commerce Website
+Total Value: $1,000
+Milestones: 4 × $250 each
+
+FREELANCER THINKS:
+"I only want $500. Let me complete 2 milestones,
+get paid $500, then abandon the project."
+
+WHAT HAPPENS:
+✓ Freelancer gets: $500 for 2 milestones
+✓ Platform assigns backup freelancer
+✓ Backup gets: $500 for remaining 2 milestones
+✓ Platform pays: $1,000 total for $1,000 project
+
+RESULT: Platform breaks even, but...
+- Time wasted on replacement
+- Client trust at risk
+- Platform reputation damaged
+- Freelancer gets penalty-free money</code></pre>
+                  </div>
+
+                  <p class="mt-6 font-semibold text-slate-900">This is unacceptable.</p>
+
+                  <div class="mt-6 rounded-2xl border border-[#4B1ED6]/20 bg-[#4B1ED6]/6 p-5">
+                    <div class="text-sm font-semibold text-slate-900">Principle</div>
+                    <p class="mt-2 text-sm text-slate-700">
+                      “You signed up to complete projects. Breaking commitment = financial penalty.”
+                    </p>
+                  </div>
+                </section>
+
+                <!-- ============================
+                     PENALTY STRUCTURE
+                     ============================ -->
+                <section id="penalties" class="reveal scroll-mt-28 mt-14">
+                  <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[color:var(--spl-purple)]">Penalty Structure</h2>
+                  <p class="mt-4 text-slate-700">
+                    If a freelancer abandons a project without a valid emergency, penalties apply to the value of completed work. Repeat abandonment escalates quickly.
+                  </p>
+
+                  <div class="mt-8 overflow-x-auto rounded-3xl border border-slate-200">
+                    <table class="min-w-[900px] w-full border-separate border-spacing-0">
+                      <thead>
+                        <tr>
+                          <th class="text-left p-4 bg-[#4B1ED6] text-white text-sm font-semibold">Tier</th>
+                          <th class="text-left p-4 bg-[#4B1ED6] text-white text-sm font-semibold">Offense Window</th>
+                          <th class="text-left p-4 bg-[#4B1ED6] text-white text-sm font-semibold">Penalty</th>
+                          <th class="text-left p-4 bg-[#4B1ED6] text-white text-sm font-semibold">Keep</th>
+                          <th class="text-left p-4 bg-[#4B1ED6] text-white text-sm font-semibold">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-sm">
+                        <tr class="bg-white hover:bg-[#4B1ED6]/6 transition">
+                          <td class="p-4 border-t border-slate-200 font-semibold">Tier 1 — First-time abandonment</td>
+                          <td class="p-4 border-t border-slate-200">Rolling 30-day window</td>
+                          <td class="p-4 border-t border-slate-200"><span class="font-semibold text-[color:var(--spl-purple)]">15%</span> of completed work value</td>
+                          <td class="p-4 border-t border-slate-200">85%</td>
+                          <td class="p-4 border-t border-slate-200">Formal warning issued</td>
+                        </tr>
+                        <tr class="bg-slate-50 hover:bg-[#4B1ED6]/6 transition">
+                          <td class="p-4 border-t border-slate-200 font-semibold">Tier 2 — Second abandonment</td>
+                          <td class="p-4 border-t border-slate-200">Rolling 30-day window</td>
+                          <td class="p-4 border-t border-slate-200"><span class="font-semibold text-[color:var(--spl-purple)]">30%</span> of completed work value</td>
+                          <td class="p-4 border-t border-slate-200">70%</td>
+                          <td class="p-4 border-t border-slate-200">Final warning + account flagged (high risk)</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-[#4B1ED6]/6 transition">
+                          <td class="p-4 border-t border-slate-200 font-semibold">Tier 3 — Third abandonment</td>
+                          <td class="p-4 border-t border-slate-200">Rolling 30-day window</td>
+                          <td class="p-4 border-t border-slate-200"><span class="font-semibold text-[color:var(--spl-purple)]">50%</span> of completed work value</td>
+                          <td class="p-4 border-t border-slate-200">50%</td>
+                          <td class="p-4 border-t border-slate-200">30-day suspension (no new projects)</td>
+                        </tr>
+                        <tr class="bg-slate-50 hover:bg-[#4B1ED6]/6 transition">
+                          <td class="p-4 border-t border-slate-200 font-semibold">Tier 4 — Fourth abandonment</td>
+                          <td class="p-4 border-t border-slate-200">Rolling 60-day window</td>
+                          <td class="p-4 border-t border-slate-200"><span class="font-semibold text-[color:var(--spl-purple)]">100%</span> of completed work value</td>
+                          <td class="p-4 border-t border-slate-200">0%</td>
+                          <td class="p-4 border-t border-slate-200">Permanent ban</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="mt-10 grid gap-6">
+                    <div class="rounded-3xl border border-slate-200 p-6">
+                      <div class="text-sm font-semibold text-slate-900">Tier 1 example</div>
+                      <pre class="mt-3 overflow-auto rounded-2xl border border-slate-200 bg-slate-50 p-4 text-xs leading-6 text-slate-700"><code>Completed work value: $500
+Penalty (15%): $75
+Freelancer receives: $425
+Platform keeps: $75 (replacement costs)</code></pre>
+                    </div>
+                    <div class="rounded-3xl border border-slate-200 p-6">
+                      <div class="text-sm font-semibold text-slate-900">Tier 2 example</div>
+                      <pre class="mt-3 overflow-auto rounded-2xl border border-slate-200 bg-slate-50 p-4 text-xs leading-6 text-slate-700"><code>Completed work value: $600
+Penalty (30%): $180
+Freelancer receives: $420
+Platform keeps: $180
+Account flagged: High risk</code></pre>
+                    </div>
+                    <div class="rounded-3xl border border-slate-200 p-6">
+                      <div class="text-sm font-semibold text-slate-900">Tier 3 example</div>
+                      <pre class="mt-3 overflow-auto rounded-2xl border border-slate-200 bg-slate-50 p-4 text-xs leading-6 text-slate-700"><code>Completed work value: $400
+Penalty (50%): $200
+Freelancer receives: $200
+Platform keeps: $200
+Suspended: 30 days</code></pre>
+                    </div>
+                    <div class="rounded-3xl border border-[#4B1ED6]/20 bg-[#4B1ED6]/6 p-6">
+                      <div class="text-sm font-semibold text-slate-900">Tier 4 example</div>
+                      <pre class="mt-3 overflow-auto rounded-2xl border border-[#4B1ED6]/20 bg-white p-4 text-xs leading-6 text-slate-700"><code>Completed work value: $700
+Penalty (100%): $700
+Freelancer receives: $0
+Platform keeps: $700 (pays backup freelancer)
+Account: PERMANENTLY BANNED</code></pre>
+                      <p class="mt-3 text-sm text-slate-700">
+                        Reasoning: a proven pattern of unreliability.
+                      </p>
+                    </div>
+                  </div>
+
+                  <h3 class="mt-12 text-xl sm:text-2xl font-bold text-slate-900">Penalty reset mechanism</h3>
+                  <div class="mt-4 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+                    <pre class="overflow-auto rounded-2xl border border-slate-200 bg-white p-4 text-xs leading-6 text-slate-700"><code>COUNTING WINDOW
+- Rolling 30-day window for Tier 1–3
+- Rolling 60-day window for Tier 4
+
+RESET CONDITIONS
+✓ Complete 5 projects successfully (on-time, quality) → counter resets to 0
+✓ 90 days with zero abandonment → counter resets to 0
+✗ Any abandonment within 90 days → counter continues
+
+EXAMPLE
+Jan 1: Abandonment #1 (15%)
+Jan 15: Abandonment #2 (30%)
+Feb 1: Complete 5 successful projects → counter resets
+Feb 20: Abandonment → treated as first offense (15%)</code></pre>
+                  </div>
+                </section>
+
+                <!-- ============================
+                     VALID EMERGENCIES
+                     ============================ -->
+                <section id="emergencies" class="reveal scroll-mt-28 mt-14">
+                  <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[color:var(--spl-purple)]">Valid Emergencies</h2>
+                  <p class="mt-4 text-slate-700">
+                    Valid emergencies receive <span class="font-semibold">0% penalty</span> (freelancer keeps 100% of completed work), if communicated immediately and supported by proof.
+                  </p>
+
+                  <div class="mt-8 grid gap-6 lg:grid-cols-2">
+                    <div class="rounded-3xl border border-slate-200 p-6">
+                      <div class="text-sm font-semibold text-slate-900">Valid (examples)</div>
+                      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Hospitalization / serious illness (doctor or hospital proof)</span></li>
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Immediate family medical emergency (proof required)</span></li>
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Death in immediate family (documentation)</span></li>
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Natural disaster / force majeure affecting your home (official proof)</span></li>
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Region-wide extended outage 5+ days (utility/ISP proof)</span></li>
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Device failure (sole device) with reasonable replacement time</span></li>
+                      </ul>
+                    </div>
+                    <div class="rounded-3xl border border-slate-200 p-6">
+                      <div class="text-sm font-semibold text-slate-900">Not valid (examples)</div>
+                      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+                        <li class="flex gap-2"><span class="text-red-600">✗</span><span>Got a better paying project elsewhere</span></li>
+                        <li class="flex gap-2"><span class="text-red-600">✗</span><span>Changed mind / lost motivation</span></li>
+                        <li class="flex gap-2"><span class="text-red-600">✗</span><span>Underestimated complexity</span></li>
+                        <li class="flex gap-2"><span class="text-red-600">✗</span><span>Personal vacation without pre-approval</span></li>
+                        <li class="flex gap-2"><span class="text-red-600">✗</span><span>“Busy with other work”</span></li>
+                        <li class="flex gap-2"><span class="text-red-600">✗</span><span>Client is difficult (escalate to Splinster instead)</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="mt-8 rounded-2xl border border-[#4B1ED6]/20 bg-[#4B1ED6]/6 p-5">
+                    <div class="text-sm font-semibold text-slate-900">How to claim an exception</div>
+                    <ol class="mt-3 space-y-2 text-sm text-slate-700 list-decimal pl-5">
+                      <li>Notify us immediately (even a 1-line message)</li>
+                      <li>Submit proof within 7 days</li>
+                      <li>We review within 48 hours</li>
+                      <li>If approved: no penalty</li>
+                      <li>If denied: standard penalty applies</li>
+                    </ol>
+                  </div>
+                </section>
+
+                <!-- ============================
+                     PERFORMANCE TIERS
+                     ============================ -->
+                <section id="tiers" class="reveal scroll-mt-28 mt-14">
+                  <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[color:var(--spl-purple)]">Performance Tiers</h2>
+                  <p class="mt-4 text-slate-700">
+                    Reliable freelancers are rewarded with priority matching, faster payouts, and lower penalties. Underperforming accounts are restricted until performance recovers.
+                  </p>
+
+                  <div class="mt-8 grid gap-6 sm:grid-cols-2">
+                    <div class="rounded-3xl border border-yellow-300/60 bg-white p-6 shadow-sm">
+                      <div class="text-xs font-semibold tracking-[0.18em] text-yellow-700">PLATINUM (Top 5%)</div>
+                      <div class="mt-2 text-lg font-semibold">Highest trust tier</div>
+                      <div class="mt-4 text-sm font-semibold text-slate-900">Requirements</div>
+                      <ul class="mt-2 space-y-2 text-sm text-slate-700">
+                        <li>• 10+ completed projects</li>
+                        <li>• 100% on-time delivery (last 3 months)</li>
+                        <li>• Average rating 4.8+</li>
+                        <li>• Zero abandonments</li>
+                      </ul>
+                      <div class="mt-4 text-sm font-semibold text-slate-900">Benefits</div>
+                      <ul class="mt-2 space-y-2 text-sm text-slate-700">
+                        <li>• 10% higher rates allowed</li>
+                        <li>• Priority matching</li>
+                        <li>• First offense waived</li>
+                        <li>• Featured as Top Freelancer</li>
+                        <li>• Direct client referrals</li>
+                      </ul>
+                    </div>
+
+                    <div class="rounded-3xl border border-amber-300/60 bg-white p-6 shadow-sm">
+                      <div class="text-xs font-semibold tracking-[0.18em] text-amber-700">GOLD (Top 20%)</div>
+                      <div class="mt-2 text-lg font-semibold">Strong performers</div>
+                      <div class="mt-4 text-sm font-semibold text-slate-900">Requirements</div>
+                      <ul class="mt-2 space-y-2 text-sm text-slate-700">
+                        <li>• 5+ completed projects</li>
+                        <li>• 95% on-time delivery</li>
+                        <li>• Average rating 4.5+</li>
+                        <li>• Max 1 abandonment (valid emergency)</li>
+                      </ul>
+                      <div class="mt-4 text-sm font-semibold text-slate-900">Benefits</div>
+                      <ul class="mt-2 space-y-2 text-sm text-slate-700">
+                        <li>• 5% higher rates allowed</li>
+                        <li>• Faster payment (2 days vs 5)</li>
+                        <li>• Reduced Tier 1 penalty (10% vs 15%)</li>
+                      </ul>
+                    </div>
+
+                    <div class="rounded-3xl border border-slate-300/70 bg-white p-6 shadow-sm">
+                      <div class="text-xs font-semibold tracking-[0.18em] text-slate-600">SILVER (Standard)</div>
+                      <div class="mt-2 text-lg font-semibold">Default tier</div>
+                      <div class="mt-4 text-sm font-semibold text-slate-900">Requirements</div>
+                      <ul class="mt-2 space-y-2 text-sm text-slate-700">
+                        <li>• 2+ completed projects</li>
+                        <li>• 90% on-time delivery</li>
+                        <li>• Average rating 4.0+</li>
+                      </ul>
+                      <div class="mt-4 text-sm font-semibold text-slate-900">Benefits</div>
+                      <ul class="mt-2 space-y-2 text-sm text-slate-700">
+                        <li>• Standard matching</li>
+                        <li>• Standard payouts</li>
+                        <li>• Standard penalties</li>
+                      </ul>
+                    </div>
+
+                    <div class="rounded-3xl border border-red-300/60 bg-white p-6 shadow-sm">
+                      <div class="text-xs font-semibold tracking-[0.18em] text-red-700">PROBATION</div>
+                      <div class="mt-2 text-lg font-semibold">Underperforming</div>
+                      <div class="mt-4 text-sm font-semibold text-slate-900">Triggers</div>
+                      <ul class="mt-2 space-y-2 text-sm text-slate-700">
+                        <li>• Below 85% on-time delivery</li>
+                        <li>• Average rating below 3.8</li>
+                        <li>• 2+ abandonments in 60 days</li>
+                      </ul>
+                      <div class="mt-4 text-sm font-semibold text-slate-900">Restrictions</div>
+                      <ul class="mt-2 space-y-2 text-sm text-slate-700">
+                        <li>• Limited to 1 active project</li>
+                        <li>• Higher penalties (+10%)</li>
+                        <li>• No bonuses</li>
+                        <li>• Weekly performance review</li>
+                      </ul>
+                      <div class="mt-4 text-xs text-slate-500">Path back to Silver: complete 3 projects successfully.</div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- ============================
+                     ADDITIONAL RULES
+                     ============================ -->
+                <section id="rules" class="reveal scroll-mt-28 mt-14">
+                  <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[color:var(--spl-purple)]">Additional Rules</h2>
+                  <p class="mt-4 text-slate-700">
+                    These rules prevent silent failures, improve quality outcomes, and protect delivery timelines.
+                  </p>
+
+                  <ol class="mt-8 space-y-6">
+                    <li class="rounded-3xl border border-slate-200 p-6">
+                      <div class="text-sm font-semibold text-slate-900">1. Communication requirements</div>
+                      <pre class="mt-3 overflow-auto rounded-2xl border border-slate-200 bg-slate-50 p-4 text-xs leading-6 text-slate-700"><code>For projects > $5,000:
+- Daily status update required
+- Miss 2 consecutive days = warning
+- Miss 3 consecutive days = red flag (we call you)
+- Miss 5 consecutive days = assumed abandonment
+
+For projects < $5,000:
+- Update every 2 days minimum
+
+Penalty for non-communication:
+1st violation: warning
+2nd violation: $50 fine
+3rd violation: 10% penalty on current milestone
+4th violation: project reassignment + 30% penalty</code></pre>
+                      <p class="mt-3 text-sm text-slate-700">
+                        Why: silence creates client worry. We cannot guarantee delivery if we don’t know project status.
+                      </p>
+                    </li>
+
+                    <li class="rounded-3xl border border-slate-200 p-6">
+                      <div class="text-sm font-semibold text-slate-900">2. On-time delivery incentive (bonuses)</div>
+                      <pre class="mt-3 overflow-auto rounded-2xl border border-slate-200 bg-slate-50 p-4 text-xs leading-6 text-slate-700"><code>Deliver BEFORE deadline:
+- 1–2 days early: 5% bonus
+- 3–5 days early: 10% bonus
+- 6+ days early: 15% bonus
+
+Example:
+Milestone value: $500
+Delivered 4 days early
+Bonus (10%): $50
+You receive: $550</code></pre>
+                      <p class="mt-3 text-sm text-slate-700">
+                        Why: rewards speed, encourages early delivery, reduces platform risk, and increases client satisfaction.
+                      </p>
+                    </li>
+
+                    <li class="rounded-3xl border border-slate-200 p-6">
+                      <div class="text-sm font-semibold text-slate-900">3. Quality score system</div>
+                      <pre class="mt-3 overflow-auto rounded-2xl border border-slate-200 bg-slate-50 p-4 text-xs leading-6 text-slate-700"><code>Client rates each milestone:
+5 stars: bonus 5% on next milestone + priority matching
+4 stars: normal payment
+3 stars: warning + closer monitoring
+2 stars: 5% penalty + quality review
+1 star: 15% penalty + mandatory revision + account flagged
+
+Consecutive low ratings:
+3 milestones rated 2 stars or below → account suspended for review</code></pre>
+                    </li>
+
+                    <li class="rounded-3xl border border-slate-200 p-6">
+                      <div class="text-sm font-semibold text-slate-900">4. Revision limit</div>
+                      <pre class="mt-3 overflow-auto rounded-2xl border border-slate-200 bg-slate-50 p-4 text-xs leading-6 text-slate-700"><code>Included revisions: 2 rounds per milestone
+
+Beyond that:
+3rd revision: included, but warning
+4th revision: $25 fee (deducted from milestone payment)
+5+ revisions: case-by-case
+- If client scope creep: client is charged
+- If poor quality: freelancer bears cost</code></pre>
+                    </li>
+
+                    <li class="rounded-3xl border border-slate-200 p-6">
+                      <div class="text-sm font-semibold text-slate-900">5. Project acceptance commitment</div>
+                      <pre class="mt-3 overflow-auto rounded-2xl border border-slate-200 bg-slate-50 p-4 text-xs leading-6 text-slate-700"><code>When you click "Accept Project":
+You legally commit to:
+✓ Complete all milestones
+✓ Meet deadlines
+✓ Deliver quality work
+✓ Communicate proactively
+
+Cooling-off period: 24 hours
+- Decline within 24 hours: zero penalty
+After 24 hours:
+- Abandonment rules apply</code></pre>
+                    </li>
+                  </ol>
+
+                  <h3 class="mt-12 text-xl sm:text-2xl font-bold text-slate-900">Where penalty money goes</h3>
+                  <div class="mt-4 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+                    <pre class="overflow-auto rounded-2xl border border-slate-200 bg-white p-4 text-xs leading-6 text-slate-700"><code>30% → Backup Freelancer Incentive
+40% → Platform Operations
+20% → Client Compensation
+10% → Insurance Reserve
+
+Example: $300 penalty
+→ $90 backup freelancer bonus
+→ $120 operations
+→ $60 client compensation
+→ $30 reserve fund</code></pre>
+                  </div>
+
+                  <h3 class="mt-12 text-xl sm:text-2xl font-bold text-slate-900">Protection mechanisms (fairness)</h3>
+                  <div class="mt-4 grid gap-4">
+                    <div class="rounded-2xl border border-slate-200 p-5">
+                      <div class="text-sm font-semibold text-slate-900">For freelancers</div>
+                      <ul class="mt-2 space-y-2 text-sm text-slate-700">
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Valid emergency = 0% penalty (with proof)</span></li>
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>7-day dispute window</span></li>
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Performance tiers reward reliability</span></li>
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>24-hour cooling-off after acceptance</span></li>
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Counter reset after sustained success</span></li>
+                      </ul>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 p-5">
+                      <div class="text-sm font-semibold text-slate-900">For platform & clients</div>
+                      <ul class="mt-2 space-y-2 text-sm text-slate-700">
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Penalties fund fast replacement, reducing disruption</span></li>
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Deterrence reduces abandonment rates</span></li>
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Quality filters improve trust over time</span></li>
+                        <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Client compensation protects the guarantee reputation</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <h3 class="mt-12 text-xl sm:text-2xl font-bold text-slate-900">Implementation timeline</h3>
+                  <div class="mt-4 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+                    <pre class="overflow-auto rounded-2xl border border-slate-200 bg-white p-4 text-xs leading-6 text-slate-700"><code>Phase 1 (Months 1–3): Soft launch
+- Warning only (no financial penalty)
+- Track abandonment data
+- Educate freelancers
+
+Phase 2 (Months 4–6): Gradual enforcement
+- Tier 1: 10% | Tier 2: 20% | Tier 3: 30% | Tier 4: 50%
+
+Phase 3 (Month 7+): Full enforcement
+- 15% → 30% → 50% → 100%</code></pre>
+                  </div>
+
+                  <h3 class="mt-12 text-xl sm:text-2xl font-bold text-slate-900">Success metrics</h3>
+                  <div class="mt-4 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+                    <pre class="overflow-auto rounded-2xl border border-slate-200 bg-white p-4 text-xs leading-6 text-slate-700"><code>1) Abandonment rate target: < 5%
+2) Penalty revenue target: ₹1–2 lakh/month
+3) Freelancer satisfaction target: 4.5+/5
+4) Client trust score target: 95%+
+5) Successful replacements target: 100%
+6) Appeal success rate target: 10–15%</code></pre>
+                  </div>
+
+                  <div class="mt-10 rounded-3xl border border-[#4B1ED6]/20 bg-[#4B1ED6]/6 p-6">
+                    <div class="text-sm font-semibold text-slate-900">Summary</div>
+                    <ul class="mt-3 space-y-2 text-sm text-slate-700">
+                      <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Prevents abuse (no gaming partial completion)</span></li>
+                      <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Protects platform (penalties fund replacement)</span></li>
+                      <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Maintains fairness (valid emergencies exempted)</span></li>
+                      <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Encourages quality (tiers + bonuses)</span></li>
+                      <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Builds discipline (commitment has consequences)</span></li>
+                      <li class="flex gap-2"><span class="text-emerald-600">✓</span><span>Strengthens trust (we can guarantee delivery confidently)</span></li>
+                    </ul>
+                  </div>
+                </section>
+
+                <!-- ============================
+                     LEGAL TERMS
+                     ============================ -->
+                <section id="legal" class="reveal scroll-mt-28 mt-14">
+                  <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[color:var(--spl-purple)]">Legal Terms</h2>
+                  <p class="mt-4 text-slate-700">
+                    The following clause can be included in the Freelancer Agreement. This is enforced to protect our guarantee.
+                  </p>
+
+                  <div class="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-5">
+                    <div class="flex items-center justify-between gap-4">
+                      <div class="text-sm font-semibold text-slate-900">Clause (copy/paste)</div>
+                      <button type="button" class="copy-btn inline-flex items-center justify-center rounded-xl bg-white border border-slate-200 px-3 py-2 text-xs font-semibold text-slate-900 hover:shadow-sm hover:scale-[1.01] transition" data-copy-target="#legalClause">
+                        Copy
+                      </button>
+                    </div>
+
+                    <pre class="mt-4 overflow-auto rounded-2xl border border-slate-200 bg-white p-4 text-xs leading-6 text-slate-700"><code id="legalClause">SECTION: PROJECT COMMITMENT & ABANDONMENT POLICY
+
+By accepting a project on Splinster, you commit to completing all milestones as specified.
+Abandoning a project without valid emergency will result in the following penalties applied to your completed work value:
+
+1st Abandonment (30-day period): 15% penalty
+2nd Abandonment (30-day period): 30% penalty
+3rd Abandonment (30-day period): 50% penalty + 30-day suspension
+4th Abandonment (60-day period): 100% penalty + permanent ban
+
+VALID EMERGENCIES (with proof, no penalty):
+- Medical emergencies (hospital admission, doctor’s certificate)
+- Family emergencies (death certificate, disaster proof)
+- Force majeure (extended power outage 5+ days, infrastructure failure)
+
+NOT VALID:
+- Better paying opportunity elsewhere
+- Changed mind
+- Underestimated complexity
+- Personal vacation without pre-approval
+
+EXEMPTION PERIOD:
+You may decline any project within 24 hours of acceptance without penalty.
+After 24 hours, commitment is binding.
+
+PENALTY ALLOCATION:
+Penalties fund backup freelancer incentives (30%), operational costs (40%), client compensation (20%), and platform reserves (10%).
+
+DISPUTE:
+You may dispute any penalty within 7 days by providing evidence.
+Final decision by Splinster management within 5 business days.
+
+By clicking "Accept Project," you acknowledge and agree to these terms.
+
+Signature: [Digital acceptance timestamp]
+Date: [Project acceptance date]</code></pre>
+                    <p class="mt-3 text-xs text-slate-500">Note: Consult a qualified lawyer before publishing final legal text.</p>
+                  </div>
+                </section>
+
+                <!-- ============================
+                     FAQ
+                     ============================ -->
+                <section id="faq" class="reveal scroll-mt-28 mt-14">
+                  <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[color:var(--spl-purple)]">Frequently Asked Questions</h2>
+                  <p class="mt-4 text-slate-700">
+                    These FAQs are designed to clarify intent: we are strict to protect trust, while keeping enforcement fair.
+                  </p>
+
+                  <div class="mt-8 divide-y divide-slate-200 rounded-3xl border border-slate-200 overflow-hidden">
+                    <div>
+                      <h3>
+                        <button class="faq-btn w-full text-left px-6 py-5 bg-white hover:bg-slate-50 transition flex items-center justify-between gap-4" aria-expanded="false" aria-controls="faq1" id="faq1btn">
+                          <span class="font-semibold">Why are these rules so strict?</span>
+                          <span class="text-[color:var(--spl-purple)]" aria-hidden="true">+</span>
+                        </button>
+                      </h3>
+                      <div id="faq1" role="region" aria-labelledby="faq1btn" class="faq-panel hidden px-6 pb-6 text-slate-600">
+                        Because Splinster guarantees delivery for clients. If someone abandons, we must replace them fast to protect timelines and quality.
+                        Strict rules prevent abuse and preserve the trust that makes the guarantee possible.
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3>
+                        <button class="faq-btn w-full text-left px-6 py-5 bg-white hover:bg-slate-50 transition flex items-center justify-between gap-4" aria-expanded="false" aria-controls="faq2" id="faq2btn">
+                          <span class="font-semibold">What counts as a valid emergency?</span>
+                          <span class="text-[color:var(--spl-purple)]" aria-hidden="true">+</span>
+                        </button>
+                      </h3>
+                      <div id="faq2" role="region" aria-labelledby="faq2btn" class="faq-panel hidden px-6 pb-6 text-slate-600">
+                        Serious medical emergencies, immediate family emergencies, and force majeure events can qualify — with timely communication and proof submitted within 7 days.
+                        If approved, the penalty is 0%.
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3>
+                        <button class="faq-btn w-full text-left px-6 py-5 bg-white hover:bg-slate-50 transition flex items-center justify-between gap-4" aria-expanded="false" aria-controls="faq3" id="faq3btn">
+                          <span class="font-semibold">Can I dispute a penalty?</span>
+                          <span class="text-[color:var(--spl-purple)]" aria-hidden="true">+</span>
+                        </button>
+                      </h3>
+                      <div id="faq3" role="region" aria-labelledby="faq3btn" class="faq-panel hidden px-6 pb-6 text-slate-600">
+                        Yes. You may dispute within 7 days by providing evidence. Splinster management reviews and decides within 5 business days.
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3>
+                        <button class="faq-btn w-full text-left px-6 py-5 bg-white hover:bg-slate-50 transition flex items-center justify-between gap-4" aria-expanded="false" aria-controls="faq4" id="faq4btn">
+                          <span class="font-semibold">“30% penalty seems harsh” — is it fair?</span>
+                          <span class="text-[color:var(--spl-purple)]" aria-hidden="true">+</span>
+                        </button>
+                      </h3>
+                      <div id="faq4" role="region" aria-labelledby="faq4btn" class="faq-panel hidden px-6 pb-6 text-slate-600">
+                        It’s designed to be fair: Tier 1 starts at 15% (warning level), valid emergencies are exempted (0%), and performance tiers reduce penalties for reliable freelancers.
+                        Higher tiers only apply if abandonment repeats in a short window.
+                      </div>
+                    </div>
+                  </div>
+
+                </section>
+
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 5: CTA (BOTTOM)
+         ============================ -->
+    <section class="bg-[#4B1ED6]/8" style="background-color: rgba(75, 30, 214, 0.08);">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-14 sm:py-16">
+          <div class="reveal rounded-3xl border border-[#4B1ED6]/15 bg-white p-8 sm:p-10 text-center">
+            <h2 class="font-display text-2xl sm:text-3xl font-extrabold">Questions About These Rules?</h2>
+            <p class="mt-3 text-slate-600">Contact our support team for clarification.</p>
+            <div class="mt-8 flex items-center justify-center">
+              <a href="mailto:hello@splinster.com" class="inline-flex items-center justify-center rounded-2xl bg-[#4B1ED6] px-7 py-4 text-base font-semibold text-white shadow-md hover:shadow-lg hover:scale-[1.03] transition will-change-transform">
+                Contact Support
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 6: FOOTER
+         ============================ -->
+    <footer class="bg-[#140A2D] text-slate-300 no-print">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-14 grid gap-12 lg:grid-cols-4">
+          <!-- Column 1: Branding -->
+          <div>
+            <div class="inline-flex items-center gap-3">
+              <div class="rounded-xl bg-white px-3 py-2">
+                <img
+                  src="https://image2url.com/r2/bucket1/images/1766620407393-9652041c-1f7f-4a91-b2e5-0b406cd75c2e.png"
+                  alt="Splinster"
+                  class="h-10 sm:h-11 w-auto drop-shadow-sm"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-slate-400">Work, Guaranteed.</p>
+            <div class="mt-6 flex items-center gap-4">
+              <a href="#" class="rounded-xl border border-white/10 px-3 py-2 hover:bg-white/5 transition" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 9.5V20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M6.5 6.2h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M10.5 20v-6.2c0-1.9 1.1-3.3 3.1-3.3 2 0 2.9 1.3 2.9 3.4V20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </a>
+              <a href="#" class="rounded-xl border border-white/10 px-3 py-2 hover:bg-white/5 transition" aria-label="Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7.5c-.6.3-1.3.5-2 .6.7-.4 1.2-1 1.4-1.8-.6.4-1.4.7-2.1.8A3 3 0 0 0 10 7.7c0 .2 0 .5.1.7-2.8-.1-5.4-1.5-7.1-3.6-.3.6-.5 1.2-.5 1.9 0 1.1.6 2.1 1.5 2.7-.6 0-1.1-.2-1.6-.4v.1c0 1.6 1.2 2.9 2.7 3.2-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.4 1.7 2.4 3.2 2.4A6 6 0 0 1 4 18.4 8.5 8.5 0 0 0 17.1 11c0-.1 0-.3 0-.4.7-.5 1.2-1.1 1.6-1.8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="mailto:hello@splinster.com" class="rounded-xl border border-white/10 px-3 py-2 hover:bg-white/5 transition" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Product -->
+          <div>
+            <div class="text-sm font-semibold text-white">Product</div>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li><a class="hover:text-white transition" href="index.html#how">How It Works</a></li>
+              <li><a class="hover:text-white transition" href="index.html#clients">For Clients</a></li>
+              <li><a class="hover:text-white transition" href="index.html#freelancers">For Freelancers</a></li>
+              <li><a class="hover:text-white transition" href="index.html#pricing">Pricing</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Company -->
+          <div>
+            <div class="text-sm font-semibold text-white">Company</div>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li><a class="hover:text-white transition" href="about.html">About</a></li>
+              <li><a class="hover:text-white transition" href="index.html#cta">Contact</a></li>
+              <li><a class="hover:text-white transition" href="accountability-rules.html" aria-current="page">Accountability Rules</a></li>
+              <li><a class="hover:text-white transition" href="Terms-of-Service.html">Terms of Service</a></li>
+              <li><a class="hover:text-white transition" href="Privacy-Policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Resources -->
+          <div>
+            <div class="text-sm font-semibold text-white">Resources</div>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li><a class="hover:text-white transition" href="#">Blog</a></li>
+              <li><a class="hover:text-white transition" href="#">Help Center</a></li>
+              <li><a class="hover:text-white transition" href="#">Case Studies</a></li>
+              <li><a class="hover:text-white transition" href="#">API Docs</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 py-8 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs text-slate-400">
+          <div>© 2026 Splinster. All rights reserved.</div>
+          <div>Made with love in India</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // ========= Helpers =========
+    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ========= Sticky nav shadow on scroll =========
+    (function initNavShadow(){
+      const header = document.querySelector('#siteHeader nav');
+      if(!header) return;
+      const setShadow = () => {
+        const scrolled = window.scrollY > 8;
+        header.classList.toggle('shadow-sm', scrolled);
+        header.classList.toggle('border-slate-200', scrolled);
+      };
+      setShadow();
+      window.addEventListener('scroll', setShadow, { passive: true });
+    })();
+
+    // ========= Mobile menu =========
+    (function initMobileMenu(){
+      const btn = document.getElementById('menuBtn');
+      const menu = document.getElementById('mobileMenu');
+      if(!btn || !menu) return;
+
+      function setOpen(open){
+        menu.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+
+      btn.addEventListener('click', () => {
+        const open = menu.classList.contains('hidden');
+        setOpen(open);
+      });
+
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+      document.addEventListener('keydown', (e) => { if(e.key === 'Escape') setOpen(false); });
+    })();
+
+    // ========= Reveal on scroll =========
+    (function initReveal(){
+      if(prefersReduced) return;
+      const els = Array.from(document.querySelectorAll('.reveal'));
+      if(!('IntersectionObserver' in window)){
+        els.forEach(el => el.classList.add('in'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      els.forEach(el => io.observe(el));
+    })();
+
+    // ========= Anchor offset for same-page hash links =========
+    (function initAnchorOffset(){
+      const headerHeight = 80;
+      function scrollToHash(hash){
+        const el = document.querySelector(hash);
+        if(!el) return;
+        const top = el.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
+        window.scrollTo({ top, behavior: prefersReduced ? 'auto' : 'smooth' });
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', (e) => {
+          const href = a.getAttribute('href');
+          if(!href || href === '#' || href.length < 2) return;
+          const target = document.querySelector(href);
+          if(!target) return;
+          e.preventDefault();
+          history.pushState(null, '', href);
+          scrollToHash(href);
+        });
+      });
+
+      if(location.hash){
+        setTimeout(() => scrollToHash(location.hash), 0);
+      }
+    })();
+
+    // ========= Active TOC highlight =========
+    (function initTOC(){
+      const sections = Array.from(document.querySelectorAll('article section[id]'));
+      const links = Array.from(document.querySelectorAll('.toc-link'));
+      const map = new Map(links.map(a => [a.getAttribute('href'), a]));
+
+      function setActive(hash){
+        links.forEach(a => {
+          a.classList.remove('bg-[#4B1ED6]/10', 'text-[color:var(--spl-purple)]', 'font-semibold');
+        });
+        const el = map.get(hash);
+        if(el){
+          el.classList.add('bg-[#4B1ED6]/10', 'text-[color:var(--spl-purple)]', 'font-semibold');
+        }
+      }
+
+      if(!('IntersectionObserver' in window)){
+        setActive('#overview');
+        return;
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a,b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if(!visible) return;
+        setActive('#' + visible.target.id);
+      }, { rootMargin: '-15% 0px -75% 0px', threshold: 0.01 });
+
+      sections.forEach(s => io.observe(s));
+      setActive('#overview');
+    })();
+
+    // ========= Mobile TOC dropdown =========
+    (function initMobileTOC(){
+      const select = document.getElementById('tocSelect');
+      if(!select) return;
+      select.addEventListener('change', () => {
+        const v = select.value;
+        if(!v) return;
+        const target = document.querySelector(v);
+        if(!target) return;
+        target.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'start' });
+        history.replaceState(null, '', v);
+      });
+    })();
+
+    // ========= TOC Search =========
+    (function initTocSearch(){
+      const input = document.getElementById('tocSearch');
+      const list = document.getElementById('tocList');
+      if(!input || !list) return;
+      const items = Array.from(list.querySelectorAll('li'));
+      input.addEventListener('input', () => {
+        const q = input.value.trim().toLowerCase();
+        items.forEach(li => {
+          const txt = li.textContent.trim().toLowerCase();
+          li.classList.toggle('hidden', q && !txt.includes(q));
+        });
+      });
+    })();
+
+    // ========= Copy buttons =========
+    (function initCopyButtons(){
+      const buttons = Array.from(document.querySelectorAll('.copy-btn'));
+      if(!buttons.length) return;
+
+      async function copyText(text){
+        try{
+          await navigator.clipboard.writeText(text);
+          return true;
+        }catch(_){
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          const ok = document.execCommand('copy');
+          document.body.removeChild(ta);
+          return ok;
+        }
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const sel = btn.getAttribute('data-copy-target');
+          const target = sel ? document.querySelector(sel) : null;
+          if(!target) return;
+          const text = target.textContent || '';
+          const ok = await copyText(text);
+          const old = btn.textContent;
+          btn.textContent = ok ? 'Copied' : 'Copy failed';
+          setTimeout(() => (btn.textContent = old), 900);
+        });
+      });
+    })();
+
+    // ========= FAQ accordion =========
+    (function initFAQ(){
+      const buttons = Array.from(document.querySelectorAll('.faq-btn'));
+      if(!buttons.length) return;
+
+      function closeAll(exceptId){
+        buttons.forEach(btn => {
+          const controls = btn.getAttribute('aria-controls');
+          if(!controls || controls === exceptId) return;
+          const panel = document.getElementById(controls);
+          btn.setAttribute('aria-expanded', 'false');
+          btn.querySelector('span[aria-hidden="true"]').textContent = '+';
+          panel?.classList.add('hidden');
+        });
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('aria-controls');
+          const panel = id ? document.getElementById(id) : null;
+          if(!panel) return;
+
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          closeAll(id);
+
+          btn.setAttribute('aria-expanded', String(!expanded));
+          btn.querySelector('span[aria-hidden="true"]').textContent = expanded ? '+' : '–';
+          panel.classList.toggle('hidden', expanded);
+        });
+      });
+    })();
+
+    // ========= Print =========
+    (function initPrint(){
+      const btn1 = document.getElementById('printBtn');
+      const btn2 = document.getElementById('mobilePrintBtn');
+      const fn = () => window.print();
+      btn1?.addEventListener('click', (e) => { e.preventDefault(); fn(); });
+      btn2?.addEventListener('click', fn);
+    })();
+  </script>
+</body>
+</html>
