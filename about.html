@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>About Splinster — Guaranteed Delivery for Freelance Projects</title>
+  <meta name="description" content="Splinster is not a freelancing marketplace. We are a guaranteed delivery service (work insurance) that monitors, intervenes, and guarantees on-time, quality project delivery—or you get refunded." />
+  <meta name="theme-color" content="#4B1ED6" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Splinster — Guaranteed Work Delivery" />
+  <meta property="og:description" content="We guarantee outcomes, not just connections. Splinster takes responsibility for on-time, quality delivery—or refunds." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style>
+    :root{
+      --spl-purple:#4B1ED6;
+      --spl-purple-ink:#2B0D8A;
+    }
+
+    body{
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      background: #fff;
+    }
+
+    .font-display{ font-family: Outfit, Inter, ui-sans-serif, system-ui; }
+
+    /* Subtle reveal animation */
+    .reveal{ opacity: 0; transform: translateY(18px); transition: opacity 700ms ease, transform 700ms ease; }
+    .reveal.in{ opacity: 1; transform: translateY(0); }
+
+    /* Hero gradient */
+    .hero-bg{
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 56%, rgba(75, 30, 214, 0.06) 100%);
+    }
+
+    .soft-purple{
+      background: radial-gradient(1200px 600px at 50% 0%, rgba(75, 30, 214, 0.10) 0%, rgba(75, 30, 214, 0.03) 40%, rgba(255,255,255,0) 70%),
+                  linear-gradient(180deg, rgba(75, 30, 214, 0.06) 0%, rgba(255,255,255,1) 55%);
+    }
+
+    .cta-purple{
+      background: radial-gradient(900px 500px at 50% 0%, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0) 60%),
+                  linear-gradient(135deg, #3D14C9 0%, #4B1ED6 50%, #2B0D8A 100%);
+    }
+
+    /* Focus ring */
+    :focus-visible{ outline: 3px solid rgba(75,30,214,.35); outline-offset: 3px; border-radius: 10px; }
+
+    @media (prefers-reduced-motion: reduce){
+      .reveal{ transition: none; opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body class="text-slate-900">
+  <!-- Skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[999] focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:shadow-lg">
+    Skip to content
+  </a>
+
+  <!-- ============================
+       SECTION 1: NAVIGATION BAR
+       ============================ -->
+  <header id="siteHeader" class="sticky top-0 z-50">
+    <nav aria-label="Primary" class="bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-transparent transition-shadow">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="h-20 flex items-center justify-between">
+          <!-- Left: Logo -->
+          <a href="index.html" class="flex items-center gap-3" aria-label="Home">
+            <img
+              src="https://image2url.com/r2/bucket1/images/1766620407393-9652041c-1f7f-4a91-b2e5-0b406cd75c2e.png"
+              alt="Splinster"
+              class="h-11 sm:h-12 w-auto drop-shadow-sm"
+              loading="eager"
+              decoding="async"
+            />
+          </a>
+
+          <!-- Center: Links (desktop) -->
+          <div class="hidden md:flex items-center gap-8 text-sm">
+            <a class="text-slate-600 hover:text-[color:var(--spl-purple)] transition" href="index.html#how">How It Works</a>
+            <a class="text-slate-600 hover:text-[color:var(--spl-purple)] transition" href="index.html#clients">For Clients</a>
+            <a class="text-slate-600 hover:text-[color:var(--spl-purple)] transition" href="index.html#freelancers">For Freelancers</a>
+            <a class="text-slate-600 hover:text-[color:var(--spl-purple)] transition" href="index.html#pricing">Pricing</a>
+            <a class="text-[color:var(--spl-purple)] font-semibold" href="about.html" aria-current="page">
+              About
+              <span class="block mt-1 h-[2px] w-full bg-[#4B1ED6] rounded-full"></span>
+            </a>
+          </div>
+
+          <!-- Right: Buttons (desktop) -->
+          <div class="hidden md:flex items-center gap-3">
+            <a href="login.html" class="text-sm text-slate-600 hover:text-slate-900 transition px-3 py-2 rounded-lg" aria-label="Sign in">
+              Sign In
+            </a>
+            <a href="sign-up.html" class="inline-flex items-center justify-center rounded-xl bg-[#4B1ED6] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] transition will-change-transform">
+              Get Started
+            </a>
+          </div>
+
+          <!-- Mobile: Hamburger -->
+          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl p-2 text-slate-700 hover:bg-slate-100 transition" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white/95 backdrop-blur">
+        <div class="mx-auto max-w-6xl px-6 py-4 grid gap-2 text-sm">
+          <a class="py-2 text-slate-700 hover:text-[color:var(--spl-purple)]" href="index.html#how">How It Works</a>
+          <a class="py-2 text-slate-700 hover:text-[color:var(--spl-purple)]" href="index.html#clients">For Clients</a>
+          <a class="py-2 text-slate-700 hover:text-[color:var(--spl-purple)]" href="index.html#freelancers">For Freelancers</a>
+          <a class="py-2 text-slate-700 hover:text-[color:var(--spl-purple)]" href="index.html#pricing">Pricing</a>
+          <a class="py-2 text-[color:var(--spl-purple)] font-semibold" href="about.html" aria-current="page">About</a>
+          <div class="pt-2 flex items-center gap-3">
+            <a class="flex-1 text-slate-700 border border-slate-200 rounded-xl px-4 py-3 hover:bg-slate-50 transition text-center" href="login.html" aria-label="Sign in (mobile)">Sign In</a>
+            <a href="sign-up.html" class="flex-1 inline-flex items-center justify-center rounded-xl bg-[#4B1ED6] px-4 py-3 font-semibold text-white shadow-sm hover:shadow-md transition">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============================
+         SECTION 2: HERO (STORY)
+         ============================ -->
+    <section class="hero-bg">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="pt-20 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24 text-center">
+          <div class="reveal inline-flex items-center gap-2 text-xs font-semibold tracking-[0.22em] text-[color:var(--spl-purple)]">
+            OUR STORY
+          </div>
+
+          <h1 class="reveal mt-6 font-display text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight">
+            We’re Building the Future of<br class="hidden sm:block" />
+            Guaranteed Work Delivery
+          </h1>
+
+          <p class="reveal mt-6 text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-3xl mx-auto">
+            Every great platform starts with a problem. Ours started when we got burned by freelancers who went silent mid-project—three times in a row.
+          </p>
+
+          <p class="reveal mt-6 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
+            In 2026, we asked a simple question: why does no one guarantee that freelance work actually gets done?
+            Marketplaces connect people and walk away. Splinster does something different: we take responsibility for outcomes.
+          </p>
+
+          <!-- Minimal story timeline card -->
+          <div class="reveal mt-12">
+            <div id="heroParallax" class="mx-auto max-w-4xl">
+              <div class="relative rounded-3xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+                <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+                  <div class="absolute -top-24 left-1/2 -translate-x-1/2 h-64 w-64 rounded-full bg-[#4B1ED6]/10 blur-3xl"></div>
+                </div>
+
+                <div class="p-6 sm:p-8">
+                  <div class="flex items-center justify-between">
+                    <div class="text-sm font-semibold">From problem → to guarantee</div>
+                    <div class="text-xs text-slate-500">Splinster, Jan 2026</div>
+                  </div>
+
+                  <div class="mt-6 grid gap-4 sm:grid-cols-3 text-left">
+                    <div class="rounded-2xl border border-slate-200 p-5">
+                      <div class="text-xs font-semibold tracking-[0.18em] text-slate-500">PAIN</div>
+                      <div class="mt-2 font-semibold">Ghosting & delays</div>
+                      <p class="mt-2 text-sm text-slate-600">Projects fail. Businesses lose time, money, and momentum.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 p-5">
+                      <div class="text-xs font-semibold tracking-[0.18em] text-slate-500">INSIGHT</div>
+                      <div class="mt-2 font-semibold">No one owns outcomes</div>
+                      <p class="mt-2 text-sm text-slate-600">Platforms facilitate connections—but avoid responsibility.</p>
+                    </div>
+                    <div class="rounded-2xl border border-[#4B1ED6]/25 bg-[#4B1ED6]/6 p-5">
+                      <div class="text-xs font-semibold tracking-[0.18em] text-[color:var(--spl-purple)]">SOLUTION</div>
+                      <div class="mt-2 font-semibold text-slate-900">Work insurance</div>
+                      <p class="mt-2 text-sm text-slate-700">We monitor, intervene, replace, and refund if we fail.</p>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 grid grid-cols-5 gap-2 text-xs">
+                    <div class="h-10 rounded-xl bg-[#4B1ED6]/12 flex items-center justify-center text-slate-600">Scope</div>
+                    <div class="h-10 rounded-xl bg-[#4B1ED6]/12 flex items-center justify-center text-slate-600">Vetting</div>
+                    <div class="h-10 rounded-xl bg-[#4B1ED6]/12 flex items-center justify-center text-slate-600">Monitoring</div>
+                    <div class="h-10 rounded-xl bg-[#4B1ED6]/12 flex items-center justify-center text-slate-600">QA</div>
+                    <div class="h-10 rounded-xl bg-[#4B1ED6] text-white flex items-center justify-center font-semibold">Delivery</div>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-4 text-xs text-slate-500">*Illustration only. Splinster is a guaranteed delivery service—not a marketplace.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 3: THE PROBLEM WE SAW
+         ============================ -->
+    <section class="soft-purple" id="problem">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-20 sm:py-24 lg:py-28">
+          <div class="reveal text-center">
+            <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.22em] text-[color:var(--spl-purple)]">
+              THE PROBLEM
+            </div>
+            <h2 class="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+              The ₹300 Billion Problem<br class="hidden sm:block" />
+              Nobody Was Solving
+            </h2>
+            <p class="mt-6 text-base sm:text-lg text-slate-600 max-w-4xl mx-auto">
+              Every year, businesses lose massive amounts on failed freelance projects—ghosting, missed deadlines, and poor quality.
+              Traditional platforms say “we just connect you.” When things go wrong, you’re on your own.
+              Agencies charge 2–3x and take months.
+              There was no middle ground—no one willing to say: “We guarantee this gets done, or you get your money back.”
+              So we built it.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-6 sm:grid-cols-3">
+            <div class="reveal rounded-3xl border border-slate-200 bg-white/70 backdrop-blur p-8 text-center">
+              <div class="font-display text-5xl sm:text-6xl font-extrabold text-[color:var(--spl-purple)]">20–30%</div>
+              <div class="mt-3 text-slate-600">Freelance project failure rate</div>
+            </div>
+            <div class="reveal rounded-3xl border border-slate-200 bg-white/70 backdrop-blur p-8 text-center">
+              <div class="font-display text-5xl sm:text-6xl font-extrabold text-[color:var(--spl-purple)]">$50,000</div>
+              <div class="mt-3 text-slate-600">Average cost of a failed project</div>
+            </div>
+            <div class="reveal rounded-3xl border border-slate-200 bg-white/70 backdrop-blur p-8 text-center">
+              <div class="font-display text-5xl sm:text-6xl font-extrabold text-[color:var(--spl-purple)]">0</div>
+              <div class="mt-3 text-slate-600">Platforms guaranteeing delivery (before us)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 4: OUR SOLUTION / MISSION
+         ============================ -->
+    <section id="mission" class="bg-white">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-20 sm:py-24 lg:py-28">
+          <div class="reveal text-center">
+            <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.22em] text-[color:var(--spl-purple)]">
+              OUR MISSION
+            </div>
+            <h2 class="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+              Guarantee Every Project.<br class="hidden sm:block" />
+              Or Refund Every Rupee.
+            </h2>
+            <p class="mt-6 text-base sm:text-lg text-slate-600 max-w-4xl mx-auto">
+              Splinster is not a freelancing marketplace. We’re a delivery guarantee service—work insurance for your project.
+              We vet professionals, monitor execution, run quality checks, and step in when risk appears.
+              If we fail to deliver what we promised, you get 100% money back.
+              This isn’t “better customer support.” It’s a different model: we own the outcome.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-2 lg:items-start">
+            <div class="reveal rounded-3xl border border-slate-200 p-8 sm:p-10">
+              <div class="text-sm font-semibold text-slate-900">How we’re different</div>
+              <ul class="mt-4 space-y-3 text-slate-700">
+                <li class="flex gap-3"><span class="text-emerald-600">✓</span><span>We vet every professional before they join</span></li>
+                <li class="flex gap-3"><span class="text-emerald-600">✓</span><span>We monitor projects proactively (not just at the end)</span></li>
+                <li class="flex gap-3"><span class="text-emerald-600">✓</span><span>If someone fails, we replace immediately—at no extra cost</span></li>
+                <li class="flex gap-3"><span class="text-emerald-600">✓</span><span>We guarantee on-time delivery—or refund</span></li>
+              </ul>
+
+              <div class="mt-6 rounded-2xl bg-slate-50 border border-slate-200 p-5">
+                <div class="text-sm font-semibold text-slate-900">Business model (the flip)</div>
+                <p class="mt-2 text-sm text-slate-600">
+                  Traditional platforms charge freelancers ~20% and take zero responsibility.
+                  Splinster charges clients a guarantee fee (typically 10–25%) so freelancers keep 0% commission—while we take responsibility for delivery.
+                </p>
+              </div>
+            </div>
+
+            <div class="reveal rounded-3xl bg-[#4B1ED6]/6 border border-[#4B1ED6]/15 p-8 sm:p-10">
+              <div class="text-xs font-semibold tracking-[0.22em] text-[color:var(--spl-purple)]">MISSION STATEMENT</div>
+              <div class="mt-4 font-display text-2xl sm:text-3xl font-extrabold leading-tight">
+                Make freelancing reliable.<br />
+                Help freelancers earn fairly.<br />
+                Guarantee outcomes, not just access.
+              </div>
+              <p class="mt-4 text-slate-700">
+                We exist to build trust—so businesses can ship, and great freelancers can work without platform taxes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 5: OUR VALUES
+         ============================ -->
+    <section id="values" class="bg-slate-50">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-20 sm:py-24 lg:py-28">
+          <div class="reveal text-center">
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">What We Stand For</h2>
+          </div>
+
+          <div class="mt-12 grid gap-8 sm:grid-cols-2">
+            <article class="reveal rounded-3xl bg-white border border-slate-200 p-8">
+              <div class="h-12 w-12 rounded-2xl bg-[#4B1ED6]/10 flex items-center justify-center text-[color:var(--spl-purple)]" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V6l-8-3-8 3v6c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold">Guaranteed Delivery</h3>
+              <p class="mt-2 text-slate-600">We don’t just connect—we guarantee. Every project we accept, we take responsibility for completion.</p>
+            </article>
+
+            <article class="reveal rounded-3xl bg-white border border-slate-200 p-8">
+              <div class="h-12 w-12 rounded-2xl bg-[#4B1ED6]/10 flex items-center justify-center text-[color:var(--spl-purple)]" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" stroke="currentColor" stroke-width="1.8"/></svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold">Freelancer-First</h3>
+              <p class="mt-2 text-slate-600">We charge 0% commission to freelancers. Great work deserves fair compensation, not platform fees.</p>
+            </article>
+
+            <article class="reveal rounded-3xl bg-white border border-slate-200 p-8">
+              <div class="h-12 w-12 rounded-2xl bg-[#4B1ED6]/10 flex items-center justify-center text-[color:var(--spl-purple)]" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2 2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold">Quality Over Quantity</h3>
+              <p class="mt-2 text-slate-600">We accept only a fraction of applications. We prefer fewer excellent professionals over thousands of average ones.</p>
+            </article>
+
+            <article class="reveal rounded-3xl bg-white border border-slate-200 p-8">
+              <div class="h-12 w-12 rounded-2xl bg-[#4B1ED6]/10 flex items-center justify-center text-[color:var(--spl-purple)]" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.8"/><path d="M8 10h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 14h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold">Radical Transparency</h3>
+              <p class="mt-2 text-slate-600">Clear pricing. Clear guarantees. Clear terms. No hidden fees, and no fine print tricks.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 6: OUR VISION
+         ============================ -->
+    <section id="vision" class="cta-purple text-white">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-20 sm:py-24 lg:py-32">
+          <div class="reveal text-center">
+            <h2 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+              Building the Amazon of Freelancing
+            </h2>
+            <p class="mt-6 text-base sm:text-lg text-white/85 max-w-4xl mx-auto">
+              Amazon didn’t invent e-commerce. They invented guaranteed delivery.
+              Before that, you bought online and hoped it arrived.
+              Amazon said: “We guarantee it arrives—or we refund you.”
+              That changed everything.
+            </p>
+            <p class="mt-6 text-base sm:text-lg text-white/85 max-w-4xl mx-auto">
+              We’re doing the same for project work.
+              Before Splinster, you start a project and hope it gets delivered.
+              We say: “We guarantee delivery—or we refund you.”
+              This is infrastructure for the future of work.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-4 sm:grid-cols-4">
+            <div class="reveal rounded-3xl bg-white/10 border border-white/15 p-6">
+              <div class="text-sm font-semibold">2026</div>
+              <div class="mt-2 text-sm text-white/85">Prove the model (India, web/app)</div>
+            </div>
+            <div class="reveal rounded-3xl bg-white/10 border border-white/15 p-6">
+              <div class="text-sm font-semibold">2027–2028</div>
+              <div class="mt-2 text-sm text-white/85">Scale nationally (more categories)</div>
+            </div>
+            <div class="reveal rounded-3xl bg-white/10 border border-white/15 p-6">
+              <div class="text-sm font-semibold">2029–2030</div>
+              <div class="mt-2 text-sm text-white/85">Go global (US, EU, Asia)</div>
+            </div>
+            <div class="reveal rounded-3xl bg-white/10 border border-white/15 p-6">
+              <div class="text-sm font-semibold">2031+</div>
+              <div class="mt-2 text-sm text-white/85">Essential work infrastructure</div>
+            </div>
+          </div>
+
+          <div class="reveal mt-12 text-center">
+            <div class="font-display text-2xl sm:text-3xl font-extrabold">
+              Every business will use Splinster—<br class="hidden sm:block" />
+              not because they want to, but because they need reliability.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 7: TEAM
+         ============================ -->
+    <section id="team" class="bg-white">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-20 sm:py-24 lg:py-28">
+          <div class="reveal text-center">
+            <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.22em] text-[color:var(--spl-purple)]">THE TEAM</div>
+            <h2 class="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+              Built by People Who Lived the Problem
+            </h2>
+          </div>
+
+          <div class="mt-12 flex justify-center">
+            <div class="reveal w-full max-w-3xl rounded-3xl border border-slate-200 bg-white p-8 sm:p-10 shadow-sm">
+              <div class="flex flex-col sm:flex-row sm:items-center gap-6">
+                <div class="h-20 w-20 rounded-full bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center text-slate-500 font-semibold text-xl" role="img" aria-label="Founder photo placeholder">
+                  LS
+                </div>
+                <div class="flex-1 text-left">
+                  <div class="font-semibold text-lg">Lucky Singh</div>
+                  <div class="text-sm text-slate-500">Founder</div>
+                  <p class="mt-4 text-slate-700">
+                    “I got burned by freelancers three times before building Splinster—lost $15,000 and 6 months on failed projects.
+                    As a freelancer myself, I also hated giving 20% to platforms that did nothing for me.
+                    I knew there had to be a better way. So I built it.
+                    Splinster is what I wish existed when I was trying to get my app built: a service that actually guaranteed delivery.”
+                  </p>
+                  <div class="mt-4 text-sm text-slate-600">
+                    Based in: India
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 rounded-2xl bg-slate-50 border border-slate-200 p-6">
+                <div class="text-sm font-semibold text-slate-900">We’re hiring</div>
+                <p class="mt-2 text-sm text-slate-600">We’re a small but mighty team building work-delivery infrastructure. If you believe in the mission, we’d love to meet you.</p>
+                <div class="mt-4">
+                  <a href="#contact" class="inline-flex items-center justify-center rounded-2xl bg-[#4B1ED6] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:shadow-md hover:scale-[1.02] transition">Join Our Team</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 8: BY THE NUMBERS
+         ============================ -->
+    <section id="numbers" class="bg-[#4B1ED6]/8" style="background-color: rgba(75, 30, 214, 0.08);">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-16 sm:py-20 lg:py-24">
+          <div class="reveal text-center">
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Where We Are Today</h2>
+            <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">We’re just getting started. Join us on the journey.</p>
+          </div>
+
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="reveal rounded-3xl border border-slate-200 bg-white p-8 text-center">
+              <div class="font-display text-5xl sm:text-6xl font-extrabold text-[color:var(--spl-purple)]"><span class="counter" data-target="50" data-prefix="₹" data-suffix="L+">0</span></div>
+              <div class="mt-3 text-slate-600">In Projects Delivered</div>
+            </div>
+            <div class="reveal rounded-3xl border border-slate-200 bg-white p-8 text-center">
+              <div class="font-display text-5xl sm:text-6xl font-extrabold text-[color:var(--spl-purple)]"><span class="counter" data-target="500" data-suffix="+">0</span></div>
+              <div class="mt-3 text-slate-600">Happy Clients</div>
+            </div>
+            <div class="reveal rounded-3xl border border-slate-200 bg-white p-8 text-center">
+              <div class="font-display text-5xl sm:text-6xl font-extrabold text-[color:var(--spl-purple)]"><span class="counter" data-target="95" data-suffix="%">0</span></div>
+              <div class="mt-3 text-slate-600">On-Time Delivery Rate</div>
+            </div>
+            <div class="reveal rounded-3xl border border-slate-200 bg-white p-8 text-center">
+              <div class="font-display text-5xl sm:text-6xl font-extrabold text-[color:var(--spl-purple)]"><span class="counter" data-target="0" data-suffix="%">0</span></div>
+              <div class="mt-3 text-slate-600">Freelancer Commission</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 9: WHAT MAKES US DIFFERENT
+         ============================ -->
+    <section id="different" class="bg-white">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-20 sm:py-24 lg:py-28">
+          <div class="reveal text-center">
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+              Why Splinster is Different
+            </h2>
+          </div>
+
+          <div class="reveal mt-12 overflow-x-auto">
+            <table class="min-w-[860px] w-full border-separate border-spacing-0 rounded-3xl overflow-hidden">
+              <thead>
+                <tr>
+                  <th class="text-left p-5 bg-slate-50 border-b border-slate-200 text-sm text-slate-500 font-semibold"> </th>
+                  <th class="text-left p-5 bg-slate-50 border-b border-slate-200 text-sm font-semibold text-slate-700">Traditional Platforms</th>
+                  <th class="text-left p-5 bg-slate-50 border-b border-slate-200 text-sm font-semibold text-slate-700">Agencies</th>
+                  <th class="text-left p-5 bg-[#4B1ED6] text-white border-b border-[#4B1ED6] text-sm font-semibold">Splinster</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm">
+                <tr>
+                  <td class="p-5 border-b border-slate-200 text-slate-500 bg-white font-semibold">Guarantee</td>
+                  <td class="p-5 border-b border-slate-200 bg-white text-slate-700">No guarantee</td>
+                  <td class="p-5 border-b border-slate-200 bg-white text-slate-700">Limited</td>
+                  <td class="p-5 border-b border-[#4B1ED6]/20 bg-[#4B1ED6]/6 text-slate-900 font-semibold">✓ 100% money-back</td>
+                </tr>
+                <tr>
+                  <td class="p-5 border-b border-slate-200 text-slate-500 bg-white font-semibold">Who Takes Risk</td>
+                  <td class="p-5 border-b border-slate-200 bg-white text-slate-700">You do</td>
+                  <td class="p-5 border-b border-slate-200 bg-white text-slate-700">Shared</td>
+                  <td class="p-5 border-b border-[#4B1ED6]/20 bg-[#4B1ED6]/6 text-slate-900 font-semibold">✓ We do</td>
+                </tr>
+                <tr>
+                  <td class="p-5 border-b border-slate-200 text-slate-500 bg-white font-semibold">Freelancer Fee</td>
+                  <td class="p-5 border-b border-slate-200 bg-white text-slate-700">20%</td>
+                  <td class="p-5 border-b border-slate-200 bg-white text-slate-700">N/A</td>
+                  <td class="p-5 border-b border-[#4B1ED6]/20 bg-[#4B1ED6]/6 text-slate-900 font-semibold">✓ 0%</td>
+                </tr>
+                <tr>
+                  <td class="p-5 border-b border-slate-200 text-slate-500 bg-white font-semibold">Pricing</td>
+                  <td class="p-5 border-b border-slate-200 bg-white text-slate-700">Cheap but risky</td>
+                  <td class="p-5 border-b border-slate-200 bg-white text-slate-700">2–3x expensive</td>
+                  <td class="p-5 border-b border-[#4B1ED6]/20 bg-[#4B1ED6]/6 text-slate-900 font-semibold">✓ Fair premium for guarantee</td>
+                </tr>
+                <tr>
+                  <td class="p-5 text-slate-500 bg-white font-semibold">If Things Go Wrong</td>
+                  <td class="p-5 bg-white text-slate-700">“Not our problem”</td>
+                  <td class="p-5 bg-white text-slate-700">Extra charges</td>
+                  <td class="p-5 bg-[#4B1ED6]/6 text-slate-900 font-semibold">✓ We fix it free</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="reveal mt-6 text-xs text-slate-500">Splinster is a guaranteed delivery service (work insurance), not a freelancing marketplace.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 10: OUR COMMITMENT
+         ============================ -->
+    <section id="commitment" class="bg-slate-50">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-20 sm:py-24 lg:py-28">
+          <div class="reveal text-center">
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Our Promise to You</h2>
+          </div>
+
+          <div class="mt-12 grid gap-8 lg:grid-cols-3">
+            <article class="reveal rounded-3xl bg-white border border-slate-200 p-8">
+              <div class="h-12 w-12 rounded-2xl bg-[#4B1ED6]/10 flex items-center justify-center text-[color:var(--spl-purple)]" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10Z" stroke="currentColor" stroke-width="1.8"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold">Always On Time</h3>
+              <p class="mt-2 text-slate-600">We deliver by the agreed deadline, or you get a partial refund. Your timeline matters.</p>
+            </article>
+
+            <article class="reveal rounded-3xl bg-white border border-slate-200 p-8">
+              <div class="h-12 w-12 rounded-2xl bg-[#4B1ED6]/10 flex items-center justify-center text-[color:var(--spl-purple)]" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.77 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold">Always Quality</h3>
+              <p class="mt-2 text-slate-600">Work matches your requirements, or we revise until it does. Quality is non-negotiable.</p>
+            </article>
+
+            <article class="reveal rounded-3xl bg-white border border-slate-200 p-8">
+              <div class="h-12 w-12 rounded-2xl bg-[#4B1ED6]/10 flex items-center justify-center text-[color:var(--spl-purple)]" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V6l-8-3-8 3v6c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="mt-5 text-lg font-semibold">Always Accountable</h3>
+              <p class="mt-2 text-slate-600">If we fail, we refund. If a professional fails, we replace. We take responsibility.</p>
+            </article>
+          </div>
+
+          <div class="reveal mt-10 text-center">
+            <div class="font-display text-2xl sm:text-3xl font-extrabold">This isn’t marketing talk. It’s legally binding.</div>
+            <div class="mt-4">
+              <a href="Terms-of-Service.html" class="inline-flex items-center justify-center rounded-2xl bg-white border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-900 hover:shadow-sm hover:scale-[1.02] transition">Read Our Terms</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 11: JOIN THE MOVEMENT
+         ============================ -->
+    <section id="join" class="cta-purple text-white">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-20 sm:py-24 lg:py-32">
+          <div class="reveal text-center">
+            <h2 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">Be Part of the Future</h2>
+            <p class="mt-6 text-base sm:text-lg text-white/85 max-w-4xl mx-auto">
+              Whether you’re a client looking for guaranteed delivery or a freelancer tired of 20% platform fees—we’d love to work with you.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-8 lg:grid-cols-2">
+            <div class="reveal rounded-3xl bg-white/10 border border-white/15 p-8">
+              <div class="flex items-center gap-3">
+                <div class="h-12 w-12 rounded-2xl bg-white/15 flex items-center justify-center" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 7h10v14H7V7Z" stroke="currentColor" stroke-width="1.6"/><path d="M9 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <div class="font-semibold">For Clients</div>
+                  <div class="text-sm text-white/80">Get guaranteed delivery</div>
+                </div>
+              </div>
+              <p class="mt-4 text-sm text-white/85">Tell us what you need. We’ll quote a fixed scope + timeline, then guarantee delivery—or refund.</p>
+              <div class="mt-6">
+                <a href="index.html#pricing" class="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-[color:var(--spl-purple)] shadow-sm hover:shadow-md hover:scale-[1.02] transition">Submit Project</a>
+              </div>
+            </div>
+
+            <div class="reveal rounded-3xl bg-white/10 border border-white/15 p-8">
+              <div class="flex items-center gap-3">
+                <div class="h-12 w-12 rounded-2xl bg-white/15 flex items-center justify-center" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" stroke="currentColor" stroke-width="1.6"/></svg>
+                </div>
+                <div>
+                  <div class="font-semibold">For Freelancers</div>
+                  <div class="text-sm text-white/80">Keep 100% of your earnings</div>
+                </div>
+              </div>
+              <p class="mt-4 text-sm text-white/85">Zero commission. Better clients. Clear milestones. We support delivery so you can focus on great work.</p>
+              <div class="mt-6">
+                <a href="index.html#freelancers" class="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-[color:var(--spl-purple)] shadow-sm hover:shadow-md hover:scale-[1.02] transition">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 12: CONTACT
+         ============================ -->
+    <section id="contact" class="bg-white">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-16 sm:py-20 lg:py-24">
+          <div class="reveal text-center">
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">Questions? We’re Here to Help</h2>
+          </div>
+
+          <div class="mt-12 grid gap-8 lg:grid-cols-3">
+            <a href="mailto:hello@splinster.com" class="reveal rounded-3xl border border-slate-200 p-8 hover:shadow-sm hover:scale-[1.01] transition" aria-label="Email Splinster">
+              <div class="h-12 w-12 rounded-2xl bg-[#4B1ED6]/10 flex items-center justify-center text-[color:var(--spl-purple)]" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="mt-5 text-lg font-semibold">Email Us</div>
+              <div class="mt-2 text-slate-600">hello@splinster.com</div>
+            </a>
+
+            <a href="tel:+919324868108" class="reveal rounded-3xl border border-slate-200 p-8 hover:shadow-sm hover:scale-[1.01] transition" aria-label="Call Splinster">
+              <div class="h-12 w-12 rounded-2xl bg-[#4B1ED6]/10 flex items-center justify-center text-[color:var(--spl-purple)]" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6.5 3.5h2.2l1.3 4-1.7 1.2a13.5 13.5 0 0 0 6 6l1.2-1.7 4 1.3v2.2c0 1-.8 1.8-1.8 1.8C10.1 19.5 4.5 13.9 4.5 5.3c0-1 .8-1.8 2-1.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="mt-5 text-lg font-semibold">Call Us</div>
+              <div class="mt-2 text-slate-600">+91 9324 868108</div>
+            </a>
+
+            <a href="#" class="reveal rounded-3xl border border-slate-200 p-8 hover:shadow-sm hover:scale-[1.01] transition" aria-label="Schedule a call">
+              <div class="h-12 w-12 rounded-2xl bg-[#4B1ED6]/10 flex items-center justify-center text-[color:var(--spl-purple)]" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M7 3v3M17 3v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 8h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M6 5h12a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 12h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <div class="mt-5 text-lg font-semibold">Schedule Call</div>
+              <div class="mt-2 text-slate-600">Book a 15‑min call</div>
+            </a>
+          </div>
+
+          <div class="reveal mt-10 flex items-center justify-center gap-4">
+            <a href="#" class="rounded-xl border border-slate-200 px-3 py-2 text-slate-600 hover:text-slate-900 hover:shadow-sm transition" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 9.5V20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M6.5 6.2h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M10.5 20v-6.2c0-1.9 1.1-3.3 3.1-3.3 2 0 2.9 1.3 2.9 3.4V20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </a>
+            <a href="#" class="rounded-xl border border-slate-200 px-3 py-2 text-slate-600 hover:text-slate-900 hover:shadow-sm transition" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7.5c-.6.3-1.3.5-2 .6.7-.4 1.2-1 1.4-1.8-.6.4-1.4.7-2.1.8A3 3 0 0 0 10 7.7c0 .2 0 .5.1.7-2.8-.1-5.4-1.5-7.1-3.6-.3.6-.5 1.2-.5 1.9 0 1.1.6 2.1 1.5 2.7-.6 0-1.1-.2-1.6-.4v.1c0 1.6 1.2 2.9 2.7 3.2-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.4 1.7 2.4 3.2 2.4A6 6 0 0 1 4 18.4 8.5 8.5 0 0 0 17.1 11c0-.1 0-.3 0-.4.7-.5 1.2-1.1 1.6-1.8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="rounded-xl border border-slate-200 px-3 py-2 text-slate-600 hover:text-slate-900 hover:shadow-sm transition" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.6"/><path d="M12 17a5 5 0 1 0-5-5 5 5 0 0 0 5 5Z" stroke="currentColor" stroke-width="1.6"/><path d="M17.8 6.2h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECTION 13: FOOTER
+         ============================ -->
+    <footer class="bg-[#140A2D] text-slate-300">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="py-14 grid gap-12 lg:grid-cols-4">
+          <!-- Column 1: Branding -->
+          <div>
+            <div class="inline-flex items-center gap-3">
+              <div class="rounded-xl bg-white px-3 py-2">
+                <img
+                  src="https://image2url.com/r2/bucket1/images/1766620407393-9652041c-1f7f-4a91-b2e5-0b406cd75c2e.png"
+                  alt="Splinster"
+                  class="h-10 sm:h-11 w-auto drop-shadow-sm"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-slate-400">Work, Guaranteed.</p>
+            <div class="mt-6 flex items-center gap-4">
+              <a href="#" class="rounded-xl border border-white/10 px-3 py-2 hover:bg-white/5 transition" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 9.5V20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M6.5 6.2h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M10.5 20v-6.2c0-1.9 1.1-3.3 3.1-3.3 2 0 2.9 1.3 2.9 3.4V20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </a>
+              <a href="#" class="rounded-xl border border-white/10 px-3 py-2 hover:bg-white/5 transition" aria-label="Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7.5c-.6.3-1.3.5-2 .6.7-.4 1.2-1 1.4-1.8-.6.4-1.4.7-2.1.8A3 3 0 0 0 10 7.7c0 .2 0 .5.1.7-2.8-.1-5.4-1.5-7.1-3.6-.3.6-.5 1.2-.5 1.9 0 1.1.6 2.1 1.5 2.7-.6 0-1.1-.2-1.6-.4v.1c0 1.6 1.2 2.9 2.7 3.2-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.4 1.7 2.4 3.2 2.4A6 6 0 0 1 4 18.4 8.5 8.5 0 0 0 17.1 11c0-.1 0-.3 0-.4.7-.5 1.2-1.1 1.6-1.8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="mailto:hello@splinster.com" class="rounded-xl border border-white/10 px-3 py-2 hover:bg-white/5 transition" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Product -->
+          <div>
+            <div class="text-sm font-semibold text-white">Product</div>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li><a class="hover:text-white transition" href="index.html#how">How It Works</a></li>
+              <li><a class="hover:text-white transition" href="index.html#clients">For Clients</a></li>
+              <li><a class="hover:text-white transition" href="index.html#freelancers">For Freelancers</a></li>
+              <li><a class="hover:text-white transition" href="index.html#pricing">Pricing</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Company -->
+          <div>
+            <div class="text-sm font-semibold text-white">Company</div>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li><a class="hover:text-white transition" href="about.html">About</a></li>
+              <li><a class="hover:text-white transition" href="#contact">Contact</a></li>
+              <li><a class="hover:text-white transition" href="accountability-rules.html">Accountability Rules</a></li>
+              <li><a class="hover:text-white transition" href="Terms-of-Service.html">Terms of Service</a></li>
+              <li><a class="hover:text-white transition" href="Privacy-Policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Resources -->
+          <div>
+            <div class="text-sm font-semibold text-white">Resources</div>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li><a class="hover:text-white transition" href="#">Blog</a></li>
+              <li><a class="hover:text-white transition" href="#">Help Center</a></li>
+              <li><a class="hover:text-white transition" href="#">Case Studies</a></li>
+              <li><a class="hover:text-white transition" href="#">API Docs</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 py-8 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs text-slate-400">
+          <div>© 2026 Splinster. All rights reserved.</div>
+          <div>Made with love in India</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Structured Data (Organization) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Splinster",
+      "url": "https://splinster.com",
+      "logo": "https://image2url.com/r2/bucket1/images/1766620407393-9652041c-1f7f-4a91-b2e5-0b406cd75c2e.png",
+      "sameAs": ["https://www.linkedin.com", "https://x.com"],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "hello@splinster.com",
+        "telephone": "+91 9324 868108"
+      }]
+    }
+  </script>
+
+  <script>
+    // ========= Helpers =========
+    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ========= Sticky nav shadow on scroll =========
+    (function initNavShadow(){
+      const header = document.querySelector('#siteHeader nav');
+      const setShadow = () => {
+        const scrolled = window.scrollY > 8;
+        header.classList.toggle('shadow-sm', scrolled);
+        header.classList.toggle('border-slate-200', scrolled);
+      };
+      setShadow();
+      window.addEventListener('scroll', setShadow, { passive: true });
+    })();
+
+    // ========= Mobile menu =========
+    (function initMobileMenu(){
+      const btn = document.getElementById('menuBtn');
+      const menu = document.getElementById('mobileMenu');
+      if(!btn || !menu) return;
+
+      function setOpen(open){
+        menu.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+
+      btn.addEventListener('click', () => {
+        const open = menu.classList.contains('hidden');
+        setOpen(open);
+      });
+
+      // Close on link click
+      menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => setOpen(false));
+      });
+
+      // Close on Escape
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape') setOpen(false);
+      });
+    })();
+
+    // ========= Reveal on scroll =========
+    (function initReveal(){
+      if(prefersReduced) return;
+      const els = Array.from(document.querySelectorAll('.reveal'));
+      if(!('IntersectionObserver' in window)){
+        els.forEach(el => el.classList.add('in'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      els.forEach(el => io.observe(el));
+    })();
+
+    // ========= Gentle parallax for hero illustration =========
+    (function initParallax(){
+      if(prefersReduced) return;
+      const el = document.getElementById('heroParallax');
+      if(!el) return;
+
+      const onScroll = () => {
+        const rect = el.getBoundingClientRect();
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        const progress = (vh - rect.top) / (vh + rect.height);
+        const clamped = Math.max(0, Math.min(1, progress));
+        const y = (clamped - 0.5) * 14;
+        el.style.transform = `translate3d(0, ${y.toFixed(2)}px, 0)`;
+      };
+
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+
+    // ========= Animated counters =========
+    (function initCounters(){
+      const counters = Array.from(document.querySelectorAll('.counter'));
+      if(!counters.length) return;
+
+      const format = (val) => Math.round(val).toString();
+
+      function animateCounter(el){
+        const target = Number(el.dataset.target || '0');
+        const prefix = el.dataset.prefix || '';
+        const suffix = el.dataset.suffix || '';
+        const duration = prefersReduced ? 1 : 1100;
+        const start = performance.now();
+
+        const tick = (now) => {
+          const t = Math.min(1, (now - start) / duration);
+          const eased = 1 - Math.pow(1 - t, 3);
+          el.textContent = `${prefix}${format(target * eased)}${suffix}`;
+          if(t < 1) requestAnimationFrame(tick);
+        };
+
+        el.textContent = `${prefix}0${suffix}`;
+        requestAnimationFrame(tick);
+      }
+
+      const seen = new WeakSet();
+      const runVisible = (el) => {
+        if(seen.has(el)) return;
+        seen.add(el);
+        animateCounter(el);
+      };
+
+      if(!('IntersectionObserver' in window)){
+        counters.forEach(runVisible);
+        return;
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) runVisible(entry.target);
+        });
+      }, { threshold: 0.35 });
+
+      counters.forEach(el => io.observe(el));
+    })();
+
+    // ========= Improve hash navigation offset for sticky header =========
+    (function initAnchorOffset(){
+      const headerHeight = 80;
+      function scrollToHash(hash){
+        const el = document.querySelector(hash);
+        if(!el) return;
+        const top = el.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
+        window.scrollTo({ top, behavior: prefersReduced ? 'auto' : 'smooth' });
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', (e) => {
+          const href = a.getAttribute('href');
+          if(!href || href === '#' || href.length < 2) return;
+          const target = document.querySelector(href);
+          if(!target) return;
+          e.preventDefault();
+          history.pushState(null, '', href);
+          scrollToHash(href);
+        });
+      });
+
+      if(location.hash){
+        setTimeout(() => scrollToHash(location.hash), 0);
+      }
+    })();
+  </script>
+</body>
+</html>
