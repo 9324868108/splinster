@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Login - Splinster | Guaranteed Project Delivery</title>
+  <meta name="description" content="Sign in to your Splinster account to manage your guaranteed delivery projects." />
+  <meta name="theme-color" content="#4B1ED6" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style>
+    :root{
+      --spl-purple:#4B1ED6;
+      --spl-purple-ink:#2B0D8A;
+    }
+
+    body{
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      background: #fff;
+    }
+
+    .font-display{ font-family: Outfit, Inter, ui-sans-serif, system-ui; }
+
+    :focus-visible{ outline: 3px solid rgba(75,30,214,.35); outline-offset: 3px; border-radius: 10px; }
+
+    /* Subtle page load */
+    .fade-in{ opacity: 0; transform: translateY(10px); animation: fadeInUp 650ms ease forwards; }
+    @keyframes fadeInUp{ to{ opacity: 1; transform: translateY(0);} }
+
+    /* Subtle invalid shake */
+    .shake{ animation: shake 240ms ease-in-out 0s 2; }
+    @keyframes shake{
+      0%{ transform: translateX(0); }
+      30%{ transform: translateX(-6px); }
+      60%{ transform: translateX(6px); }
+      100%{ transform: translateX(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .fade-in{ opacity: 1; transform: none; animation: none; }
+      .shake{ animation: none; }
+      html{ scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body class="text-slate-900">
+  <!-- Skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[999] focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:shadow-lg">
+    Skip to content
+  </a>
+
+  <main id="main" class="min-h-screen">
+    <!-- Background (subtle, premium) -->
+    <div class="min-h-screen w-full" style="background: radial-gradient(900px 600px at 20% 10%, rgba(75,30,214,.16) 0%, rgba(75,30,214,.06) 40%, rgba(255,255,255,0) 72%), linear-gradient(180deg, #ffffff 0%, rgba(75,30,214,.05) 100%);">
+      <div class="mx-auto max-w-6xl px-6 min-h-screen flex items-center py-10">
+
+        <!-- Auth shell -->
+        <section class="w-full grid gap-8 lg:gap-10 lg:grid-cols-2 items-stretch fade-in" style="animation-delay: 60ms;">
+
+          <!-- LEFT: Brand / reassurance (no form here) -->
+          <aside class="hidden lg:flex rounded-3xl border border-slate-200 bg-white/70 backdrop-blur p-9 flex-col justify-between">
+            <div>
+              <a href="index.html" class="inline-flex items-center" aria-label="Go to Splinster home">
+                <img
+                  src="https://image2url.com/r2/bucket1/images/1766620407393-9652041c-1f7f-4a91-b2e5-0b406cd75c2e.png"
+                  alt="Splinster"
+                  class="h-14 sm:h-16 w-auto drop-shadow-sm"
+                  loading="eager"
+                  decoding="async"
+                />
+              </a>
+
+              <h1 class="mt-8 font-display text-4xl font-extrabold tracking-tight">
+                Continue building<br />
+                <span class="text-[color:var(--spl-purple)]">with confidence</span>
+              </h1>
+
+              <p class="mt-4 text-slate-600 max-w-md">
+                Splinster is a guaranteed delivery service for freelance projects. We monitor progress, intervene early, and protect outcomes.
+              </p>
+
+              <div class="mt-8 grid grid-cols-3 gap-4">
+                <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                  <div class="font-display text-2xl font-extrabold text-[color:var(--spl-purple)]">₹50L+</div>
+                  <div class="mt-1 text-xs text-slate-500">Projects delivered</div>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                  <div class="font-display text-2xl font-extrabold text-[color:var(--spl-purple)]">500+</div>
+                  <div class="mt-1 text-xs text-slate-500">Happy clients</div>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                  <div class="font-display text-2xl font-extrabold text-[color:var(--spl-purple)]">95%</div>
+                  <div class="mt-1 text-xs text-slate-500">On-time rate</div>
+                </div>
+              </div>
+
+              <div class="mt-8 rounded-2xl border border-[#4B1ED6]/15 bg-[#4B1ED6]/6 p-5 text-sm text-slate-700">
+                <span class="font-semibold">Reminder:</span> We are <span class="font-semibold">not</span> a freelancing marketplace. We guarantee delivery outcomes.
+              </div>
+            </div>
+
+            <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6">
+              <div class="text-sm font-semibold">What clients say</div>
+              <p class="mt-3 text-slate-700">“Splinster delivered our app exactly on time. Worth every penny of the guarantee fee.”</p>
+              <div class="mt-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="h-10 w-10 rounded-full bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 flex items-center justify-center text-slate-500 text-sm font-semibold" aria-hidden="true">RS</div>
+                  <div>
+                    <div class="text-sm font-semibold">Rahul Sharma</div>
+                    <div class="text-xs text-slate-500">Founder, TechStart India</div>
+                  </div>
+                </div>
+                <div class="text-[color:var(--spl-purple)] text-sm" aria-label="5 out of 5 stars">★★★★★</div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- RIGHT: Form card -->
+          <section id="authCard" class="rounded-3xl border border-slate-200 bg-white shadow-sm p-7 sm:p-8 lg:p-9 flex flex-col justify-center">
+            <!-- Top row: Back + logo (compact) -->
+            <div class="flex items-center justify-between gap-4">
+              <a href="index.html" class="text-sm text-slate-600 hover:text-slate-900 transition" aria-label="Back to home">← Back to Home</a>
+              <a href="index.html" class="inline-flex items-center" aria-label="Splinster home">
+                <img
+                  src="https://image2url.com/r2/bucket1/images/1766620407393-9652041c-1f7f-4a91-b2e5-0b406cd75c2e.png"
+                  alt="Splinster"
+                  class="h-12 sm:h-14 w-auto drop-shadow-sm"
+                  loading="eager"
+                  decoding="async"
+                />
+              </a>
+            </div>
+
+            <h2 class="mt-7 font-display text-3xl sm:text-4xl font-extrabold tracking-tight">Welcome back</h2>
+            <p class="mt-2 text-slate-600">Sign in to your Splinster account.</p>
+
+            <div class="h-4"></div>
+
+            <!-- Global message -->
+            <div id="globalMsg" class="mt-5 hidden" role="status" aria-live="polite"></div>
+
+            <!-- OAuth (icon row) -->
+            <div class="mt-6">
+              <div class="flex items-center justify-between">
+                <div class="text-sm font-semibold text-slate-900">Continue with</div>
+                <div class="text-xs text-slate-500">OAuth</div>
+              </div>
+
+              <div class="mt-4 flex flex-wrap items-center gap-3 sm:gap-4">
+                <button data-oauth="google" type="button" class="oauth-btn h-12 w-12 rounded-full border border-slate-200 bg-white hover:bg-slate-50 hover:shadow-sm hover:scale-[1.03] transition flex items-center justify-center" aria-label="Continue with Google">
+                  <img alt="Google" class="h-5 w-5" src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" />
+                </button>
+
+                <button data-oauth="apple" type="button" class="oauth-btn h-12 w-12 rounded-full border border-slate-200 bg-white hover:bg-slate-50 hover:shadow-sm hover:scale-[1.03] transition flex items-center justify-center" aria-label="Continue with Apple">
+                  <svg class="h-5 w-5 text-slate-900" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M16.7 13.6c0 2.8 2.5 3.8 2.5 3.8s-1.9 5.4-4.4 5.4c-1.2 0-2.2-.8-3.5-.8-1.4 0-2.7.8-3.6.8-2.2 0-4.8-4.9-4.8-8.9 0-3.9 2.4-5.9 4.7-5.9 1.2 0 2.2.8 3.4.8 1.1 0 2.8-.9 3.9-.9.4 0 3 .1 4.4 2.4-.1.1-2.6 1.5-2.6 4.3Zm-2.1-8.3c.7-.9 1.2-2.1 1.1-3.3-1.1.1-2.4.7-3.2 1.7-.7.8-1.3 2-1.1 3.2 1.2.1 2.4-.6 3.2-1.6Z"/>
+                  </svg>
+                </button>
+
+                <button data-oauth="linkedin" type="button" class="oauth-btn h-12 w-12 rounded-full border border-slate-200 bg-white hover:bg-slate-50 hover:shadow-sm hover:scale-[1.03] transition flex items-center justify-center" aria-label="Continue with LinkedIn">
+                  <img alt="LinkedIn" class="h-5 w-5" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
+                </button>
+
+                <button data-oauth="github" type="button" class="oauth-btn h-12 w-12 rounded-full border border-slate-200 bg-white hover:bg-slate-50 hover:shadow-sm hover:scale-[1.03] transition flex items-center justify-center" aria-label="Continue with GitHub">
+                  <img alt="GitHub" class="h-5 w-5" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" />
+                </button>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="my-6 flex items-center gap-4" aria-hidden="true">
+              <div class="h-px flex-1 bg-slate-200"></div>
+              <div class="text-xs font-semibold tracking-[0.22em] text-slate-500">OR</div>
+              <div class="h-px flex-1 bg-slate-200"></div>
+            </div>
+
+            <!-- Form -->
+            <form id="loginForm" class="grid gap-4" novalidate>
+              <input type="hidden" id="csrf" name="csrf" value="" />
+
+              <div>
+                <label for="email" class="text-sm font-semibold text-slate-900">Email Address</label>
+                <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" class="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-[15px] outline-none focus:border-[#4B1ED6] transition" aria-required="true" />
+                <p id="emailErr" class="mt-2 text-sm text-red-600 hidden" role="alert"></p>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between">
+                  <label for="password" class="text-sm font-semibold text-slate-900">Password</label>
+                  <button id="togglePwd" type="button" class="text-sm font-semibold text-[color:var(--spl-purple)] hover:underline" aria-label="Show password">Show</button>
+                </div>
+                <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" class="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-[15px] outline-none focus:border-[#4B1ED6] transition" aria-required="true" />
+                <p id="passwordErr" class="mt-2 text-sm text-red-600 hidden" role="alert"></p>
+              </div>
+
+              <div class="flex items-center justify-between gap-4">
+                <label class="flex items-center gap-2 text-sm text-slate-600">
+                  <input id="remember" type="checkbox" />
+                  Remember me
+                </label>
+                <a href="#" id="forgot" class="text-sm font-semibold text-[color:var(--spl-purple)] hover:underline">Forgot password?</a>
+              </div>
+
+              <button id="submitBtn" type="submit" class="mt-1 h-12 w-full rounded-xl bg-[#4B1ED6] text-white text-[15px] font-semibold shadow-sm hover:shadow-md hover:scale-[1.01] transition disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed">
+                <span class="inline-flex items-center justify-center gap-2">
+                  <span id="btnSpinner" class="hidden h-4 w-4 rounded-full border-2 border-white/40 border-t-white animate-spin" aria-hidden="true"></span>
+                  <span id="btnText">Sign In</span>
+                </span>
+              </button>
+
+              <!-- Direct sign-up link (directly below the button) -->
+              <p class="mt-3 text-sm text-slate-600">
+                Don't have an account?
+                <a href="sign-up.html" class="text-[color:var(--spl-purple)] font-semibold hover:underline">Sign up</a>
+              </p>
+
+              <p class="text-xs text-slate-500">
+                Security note: Rate limiting and password hashing are enforced server-side.
+              </p>
+            </form>
+          </section>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // ========= Basic hardening (front-end only) =========
+    (function enforceHttps(){
+      try{
+        const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+        if(!isLocal && location.protocol === 'http:'){
+          location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        }
+      }catch(_){/* noop */}
+    })();
+
+    const els = {
+      form: document.getElementById('loginForm'),
+      wrapper: document.getElementById('authCard'),
+      globalMsg: document.getElementById('globalMsg'),
+      email: document.getElementById('email'),
+      password: document.getElementById('password'),
+      togglePwd: document.getElementById('togglePwd'),
+      remember: document.getElementById('remember'),
+      forgot: document.getElementById('forgot'),
+      submitBtn: document.getElementById('submitBtn'),
+      btnText: document.getElementById('btnText'),
+      btnSpinner: document.getElementById('btnSpinner'),
+      csrf: document.getElementById('csrf'),
+      emailErr: document.getElementById('emailErr'),
+      passwordErr: document.getElementById('passwordErr')
+    };
+
+    // UX: don't show red errors until the user interacts (or submits)
+    const touched = { email: false, password: false };
+    let submitAttempted = false;
+
+    // CSRF token placeholder
+    (function initCsrf(){
+      const token = (crypto?.getRandomValues ? Array.from(crypto.getRandomValues(new Uint8Array(16))).map(b => b.toString(16).padStart(2,'0')).join('') : String(Math.random()).slice(2));
+      sessionStorage.setItem('spl_csrf', token);
+      els.csrf.value = token;
+    })();
+
+    // Remember me preference
+    (function initRemember(){
+      els.remember.checked = localStorage.getItem('spl_remember') === '1';
+    })();
+
+    // Auto-focus
+    setTimeout(() => els.email?.focus(), 60);
+
+    const sanitize = (s) => String(s ?? '').replace(/[<>]/g, '').trim();
+    const isEmail = (s) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
+
+    function setGlobal(type, msg){
+      if(!msg){
+        els.globalMsg.classList.add('hidden');
+        els.globalMsg.textContent = '';
+        els.globalMsg.className = 'mt-5 hidden';
+        return;
+      }
+      const base = 'mt-5 rounded-2xl border p-4 text-sm';
+      const style = type === 'error'
+        ? ' border-red-200 bg-red-50 text-red-700'
+        : ' border-emerald-200 bg-emerald-50 text-emerald-800';
+      els.globalMsg.className = base + style;
+      els.globalMsg.textContent = msg;
+      els.globalMsg.classList.remove('hidden');
+    }
+
+    function setErr(el, msg, opts = {}){
+      const force = Boolean(opts.force);
+      const shouldShow = force || submitAttempted || (el === els.emailErr ? touched.email : touched.password);
+
+      if(msg && shouldShow){
+        el.textContent = msg;
+        el.classList.remove('hidden');
+      }else{
+        el.textContent = '';
+        el.classList.add('hidden');
+      }
+    }
+
+    // Basic front-end rate limiter (server-side still required)
+    const RATE_KEY = 'spl_login_attempts_v1';
+    const MAX_ATTEMPTS = 5;
+    const WINDOW_MS = 15 * 60 * 1000;
+
+    function getAttempts(){
+      const raw = localStorage.getItem(RATE_KEY);
+      const arr = raw ? JSON.parse(raw) : [];
+      const now = Date.now();
+      const filtered = arr.filter(ts => (now - ts) < WINDOW_MS);
+      localStorage.setItem(RATE_KEY, JSON.stringify(filtered));
+      return filtered;
+    }
+
+    function addAttempt(){
+      const arr = getAttempts();
+      arr.push(Date.now());
+      localStorage.setItem(RATE_KEY, JSON.stringify(arr));
+      return arr;
+    }
+
+    function isRateLimited(){
+      return getAttempts().length >= MAX_ATTEMPTS;
+    }
+
+    function shake(){
+      els.wrapper?.classList.remove('shake');
+      void els.wrapper?.offsetWidth;
+      els.wrapper?.classList.add('shake');
+    }
+
+    function validate(){
+      const email = sanitize(els.email.value);
+      const pw = els.password.value;
+
+      let ok = true;
+      if(!isEmail(email)){ ok = false; setErr(els.emailErr, 'Please enter a valid email address.'); }
+      else setErr(els.emailErr, '');
+
+      if(!pw){ ok = false; setErr(els.passwordErr, 'Please enter your password.'); }
+      else setErr(els.passwordErr, '');
+
+      if(isRateLimited()){
+        ok = false;
+        setGlobal('error', 'Too many attempts. Please wait 15 minutes and try again.');
+      }
+
+      return ok;
+    }
+
+    function setLoading(loading){
+      els.submitBtn.disabled = loading;
+      els.btnSpinner.classList.toggle('hidden', !loading);
+      els.btnText.textContent = loading ? 'Signing in...' : 'Sign In';
+    }
+
+    els.togglePwd.addEventListener('click', () => {
+      const isHidden = els.password.type === 'password';
+      els.password.type = isHidden ? 'text' : 'password';
+      els.togglePwd.textContent = isHidden ? 'Hide' : 'Show';
+      els.togglePwd.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+      els.password.focus();
+    });
+
+    els.remember.addEventListener('change', () => {
+      localStorage.setItem('spl_remember', els.remember.checked ? '1' : '0');
+    });
+
+    els.forgot.addEventListener('click', (e) => {
+      e.preventDefault();
+      setGlobal('error', 'Forgot password is not enabled yet. Please contact support at hello@splinster.com.');
+    });
+
+    document.querySelectorAll('.oauth-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const provider = btn.getAttribute('data-oauth');
+        window.location.href = `/auth/${provider}`;
+      });
+    });
+
+    // Input UX: only show errors after blur or submit attempt
+    els.email.addEventListener('input', () => { setGlobal('', ''); validate(); });
+    els.password.addEventListener('input', () => { setGlobal('', ''); validate(); });
+    els.email.addEventListener('blur', () => { touched.email = true; validate(); });
+    els.password.addEventListener('blur', () => { touched.password = true; validate(); });
+
+    els.form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      setGlobal('', '');
+      submitAttempted = true;
+
+      if(!validate()){
+        shake();
+        return;
+      }
+
+      if(isRateLimited()){
+        shake();
+        return;
+      }
+
+      const payload = {
+        email: sanitize(els.email.value).toLowerCase(),
+        password: els.password.value,
+        remember: els.remember.checked
+      };
+
+      setLoading(true);
+
+      try{
+        const csrf = sessionStorage.getItem('spl_csrf') || '';
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrf },
+          body: JSON.stringify(payload)
+        }).catch(() => null);
+
+        // If no backend, simulate credential check
+        if(!res){
+          await new Promise(r => setTimeout(r, 650));
+          if(payload.email.includes('fail') || payload.password.length < 4){
+            addAttempt();
+            setGlobal('error', 'Invalid email or password.');
+            shake();
+            setLoading(false);
+            return;
+          }
+          setGlobal('success', 'Signed in. Redirecting...');
+          setTimeout(() => { window.location.href = '/dashboard'; }, 650);
+          return;
+        }
+
+        const data = await res.json().catch(() => ({}));
+        if(!res.ok || data?.success === false){
+          addAttempt();
+          const msg = data?.error || 'Invalid email or password';
+          setGlobal('error', msg);
+          shake();
+          setLoading(false);
+          return;
+        }
+
+        setGlobal('success', 'Signed in. Redirecting...');
+        const redirectTo = data?.redirectTo || '/dashboard';
+        setTimeout(() => { window.location.href = redirectTo; }, 650);
+
+      }catch(err){
+        setGlobal('error', 'Connection failed. Check internet.');
+        shake();
+        setLoading(false);
+      }
+    });
+  </script>
+</body>
+</html>
